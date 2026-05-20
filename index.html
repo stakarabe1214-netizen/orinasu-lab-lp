@@ -1943,6 +1943,78 @@ html{scroll-padding-top:80px}
 }
 
 /* ═══════════════════════════════════════
+   おすすめプランガイド（#pricing 上部）
+   ═══════════════════════════════════════ */
+.pricing-guide {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.pricing-guide-label {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+  font-family: var(--font-mono);
+}
+.pricing-guide-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.pricing-guide-card {
+  background: var(--cream);
+  border-radius: 18px;
+  padding: 32px 24px;
+  text-align: left;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+.pgc-popular {
+  border-color: #3d7a38;
+  border-width: 2px;
+  background: #fff;
+}
+.pgc-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3d7a38;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+.pgc-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.pgc-price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #3d7a38;
+  margin: 0 0 12px;
+  font-family: var(--font-mono);
+}
+.pgc-desc {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin: 0;
+}
+.pricing-guide-note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 40px;
+}
+@media (max-width: 640px) {
+  .pricing-guide-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════
    スクロールアニメーション（厳選3種）
    ═══════════════════════════════════════ */
 
@@ -2511,6 +2583,36 @@ a.topics-item:hover .topics-title {
         <h2 class="h-display reveal-right" style="margin-top:18px">料金の<em style="color:#3d7a38">目安</em>。</h2>
       </div>
       <p class="lede">"小さく始めて、続けられる"を大切に。<br/>はじめての方は、まずお気軽にご相談ください。</p>
+    </div>
+
+    <!-- ── おすすめプランガイド ── -->
+    <div class="pricing-guide reveal">
+      <p class="pricing-guide-label">まずどれを選べばいいか迷ったら</p>
+      <div class="pricing-guide-cards">
+
+        <div class="pricing-guide-card reveal-scale">
+          <span class="pgc-badge">はじめての方に</span>
+          <p class="pgc-name">まず1点から相談プラン</p>
+          <p class="pgc-price">¥5,000〜</p>
+          <p class="pgc-desc">ポスター・SNS画像など、気軽に1点だけ頼んでみたい方に。「これって頼めますか？」から大歓迎です。</p>
+        </div>
+
+        <div class="pricing-guide-card pgc-popular reveal-scale delay-1">
+          <span class="pgc-badge">いちばん人気</span>
+          <p class="pgc-name">お店の販促まとめてプラン</p>
+          <p class="pgc-price">¥30,000〜¥80,000</p>
+          <p class="pgc-desc">チラシ・SNS素材・撮影など複数まとめて依頼したい方に。窓口ひとつで全部お任せいただけます。</p>
+        </div>
+
+        <div class="pricing-guide-card reveal-scale delay-2">
+          <span class="pgc-badge">本格的に集客したい方に</span>
+          <p class="pgc-name">しっかり集客・ブランディングプラン</p>
+          <p class="pgc-price">¥70,000〜</p>
+          <p class="pgc-desc">LP制作・ロゴ・ブランド整備などお店の見せ方を根本から整えたい方に。継続運用サポートも対応可能です。</p>
+        </div>
+
+      </div>
+      <p class="pricing-guide-note">↓ 詳細な料金はこちらからご確認ください</p>
     </div>
 
     <!-- ── カテゴリ① はじめての方におすすめ ── -->
