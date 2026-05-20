@@ -1942,6 +1942,110 @@ html{scroll-padding-top:80px}
   }
 }
 
+/* ═══════════════════════════════════════
+   Topics（お知らせ）セクション
+   ═══════════════════════════════════════ */
+.topics-section {
+  padding: 80px 0 60px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.topics-header {
+  margin-bottom: 32px;
+}
+.topics-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topics-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  transition: background .2s ease;
+}
+.topics-item:first-child {
+  border-top: 1px solid var(--line);
+}
+.topics-item:hover {
+  background: var(--cream);
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  border-radius: 8px;
+}
+.topics-date {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: .1em;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  min-width: 100px;
+}
+.topics-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-jp);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 3px 12px;
+  border-radius: 50px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.topics-badge--info {
+  background: rgba(61,122,56,.12);
+  color: #3d7a38;
+}
+.topics-badge--work {
+  background: rgba(217,199,102,.25);
+  color: var(--gold-deep);
+}
+.topics-badge--campaign {
+  background: rgba(61,122,56,.15);
+  color: #2d5f2a;
+  border: 1px solid rgba(61,122,56,.3);
+}
+.topics-title {
+  font-family: var(--font-jp);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: .02em;
+  line-height: 1.7;
+}
+a.topics-item {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a.topics-item:hover .topics-title {
+  color: #3d7a38;
+}
+@media (max-width: 600px) {
+  .topics-section {
+    padding: 60px 0 40px;
+  }
+  .topics-item {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 16px 0;
+  }
+  .topics-date {
+    font-size: 12px;
+    min-width: auto;
+  }
+  .topics-title {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
 /* ── 制作の流れ 漫画画像の黒フチ除去（画像外周の焼き込みフチをクロップ） ── */
 .flow-manga {
   overflow: hidden;
@@ -2050,6 +2154,7 @@ html{scroll-padding-top:80px}
     <img src="images/logo.png" alt="おりなす.Lab" class="logo-img">
   </a>
   <div class="site-nav-inner">
+    <a href="#topics">お知らせ</a>
     <a href="#services">サービス</a>
     <a href="#flow">制作の流れ</a>
     <a href="#pricing">料金</a>
@@ -2074,6 +2179,30 @@ html{scroll-padding-top:80px}
   <div class="hero-image">
     <img src="public/images/hero-bg.png"
          alt="神戸北区の風景">
+  </div>
+</section>
+
+<!-- ───────── Topics ───────── -->
+<section class="section topics-section" id="topics" data-screen-label="Topics">
+  <div class="wrap">
+    <div class="topics-header">
+      <span class="eyebrow reveal-pop"><span class="dot"></span><span>Topics</span></span>
+      <h2 class="h-display reveal-right" style="margin-top:16px">お知らせ</h2>
+    </div>
+    <ul class="topics-list">
+      <li class="topics-item reveal">
+        <time class="topics-date" datetime="2026-05-20">2026.05.20</time>
+        <span class="topics-badge topics-badge--info">お知らせ</span>
+        <span class="topics-title">ホームページを公開しました。</span>
+      </li>
+      <!-- ▼ 新しい記事を追加するときは、以下をコピーして上に貼り付け ▼
+      <li class="topics-item reveal">
+        <time class="topics-date" datetime="2026-XX-XX">2026.XX.XX</time>
+        <span class="topics-badge topics-badge--work">実績</span>
+        <span class="topics-title">ここにタイトルを入れる</span>
+      </li>
+      -->
+    </ul>
   </div>
 </section>
 
