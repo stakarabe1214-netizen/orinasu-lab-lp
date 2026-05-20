@@ -1828,6 +1828,51 @@ html{scroll-padding-top:80px}
   }
 }
 
+/* ── Phase 3: voices hover ── */
+.test{
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.test:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px rgba(0,0,0,.06);
+}
+
+/* ── Phase 3: works image zoom ── */
+.work-img img{
+  transition:transform .4s ease;
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.work:hover .work-img img{
+  transform:scale(1.04);
+}
+
+/* ── Phase 3: worries bg number ── */
+.pain-bg-num{
+  position:absolute;
+  right:-10px;top:50%;
+  transform:translateY(-50%);
+  font-size:120px;
+  font-family:'Noto Serif JP',serif;
+  font-weight:700;
+  color:var(--ink);
+  opacity:.04;
+  line-height:1;
+  pointer-events:none;
+  user-select:none;
+  letter-spacing:-.02em;
+  z-index:0;
+}
+
+/* ── Phase 3: mobile adjustments ── */
+@media(max-width:768px){
+  .hero-content h1{font-size:26px;line-height:1.55}
+  .site-nav.scrolled{padding:0 16px}
+  .pain-bg-num{font-size:80px}
+  .svc:hover,.price:hover,.work:hover,.test:hover{
+    transform:none;box-shadow:none;
+  }
+}
+
 </style>
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -1951,21 +1996,25 @@ html{scroll-padding-top:80px}
 
     <div class="pain-grid">
       <article class="pain pain-img reveal" style="background-image:url('images/01.jpg')">
+        <span class="pain-bg-num" aria-hidden="true">01</span>
         <span class="num">№ 01</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <p>チラシやSNS画像を作るのに、毎回時間がかかってしまう。</p>
       </article>
       <article class="pain pain-img reveal d2" style="background-image:url('images/02.jpg')">
+        <span class="pain-bg-num" aria-hidden="true">02</span>
         <span class="num">№ 02</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r=".5" fill="currentColor"/><circle cx="13" cy="10" r=".5" fill="currentColor"/></svg></div>
         <p>お店や商品の魅力が、なかなかうまく伝わらない。</p>
       </article>
       <article class="pain pain-img reveal d3" style="background-image:url('images/03.jpg')">
+        <span class="pain-bg-num" aria-hidden="true">03</span>
         <span class="num">№ 03</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <p>デザイン会社に頼むと、予算的に少し厳しい。</p>
       </article>
       <article class="pain pain-img reveal d4" style="background-image:url('images/04.jpg')">
+        <span class="pain-bg-num" aria-hidden="true">04</span>
         <span class="num">№ 04</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="14" rx="2"/><circle cx="9" cy="13" r="1.2"/><circle cx="15" cy="13" r="1.2"/><path d="M12 2v4M9 20v2M15 20v2"/></svg></div>
         <p>AIを業務に活かしたいけれど、何から始めればいいかわからない。</p>
