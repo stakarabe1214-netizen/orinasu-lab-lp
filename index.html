@@ -286,7 +286,7 @@ html{scroll-padding-top:80px}
   min-height:100vh;
   display:grid;
   grid-template-columns:1fr 1fr;
-  align-items:center;
+  align-items:stretch;
   overflow:hidden;
 }
 .hero-bg{
@@ -300,11 +300,13 @@ html{scroll-padding-top:80px}
 .hero-content{
   position:relative;
   z-index:1;
-  padding:0 60px 0 80px;
+  padding:0 60px 0 10%;
   color:#1A1A1A;
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-items:flex-start;
+  min-height:100vh;
 }
 .hero-content h1{
   font-size:clamp(32px,4.5vw,60px);
@@ -328,14 +330,16 @@ html{scroll-padding-top:80px}
 }
 .hero-cta{
   display:inline-block;
+  width:auto;
   padding:16px 40px;
   background:var(--color-accent);
   color:#ffffff;
   text-decoration:none;
-  font-size:15px;font-weight:500;
+  font-size:15px;
+  font-weight:500;
   letter-spacing:.06em;
   border-radius:2px;
-  transition:background .2s ease,transform .2s ease;
+  transition:background 0.2s ease, transform 0.2s ease;
 }
 .hero-cta:hover{
   background:var(--color-accent-dark);
@@ -344,8 +348,15 @@ html{scroll-padding-top:80px}
 .hero-image{
   position:relative;
   z-index:1;
-  height:100vh;
+  min-height:100vh;
   overflow:hidden;
+}
+.hero-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
 }
 @media(max-width:768px){
   .hero{
@@ -2001,8 +2012,7 @@ html{scroll-padding-top:80px}
   </div>
   <div class="hero-image">
     <img src="public/images/hero-bg.png"
-         alt="神戸北区の風景"
-         style="width:100%;height:100vh;object-fit:cover;object-position:center;">
+         alt="神戸北区の風景">
   </div>
 </section>
 
