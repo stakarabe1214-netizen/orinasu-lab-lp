@@ -29,7 +29,7 @@
 <meta name="twitter:creator" content="@orinasu_lab" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <style>
 /* ─────────── tokens (botanical green, BOTANIST Baby–inspired) ─────────── */
@@ -58,11 +58,13 @@
   --r-md: 18px;
   --r-lg: 28px;
   --r-xl: 40px;
-  --font-jp: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  --font-jp: "Noto Sans JP", sans-serif;
   --font-mono: "DM Mono", monospace;
-  --font-display: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  --font-display: "Noto Serif JP", serif;
   --font-hand-jp: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   --font-hand-en: "DM Mono", monospace;
+  --color-bg:#FAFAF9;--color-bg-alt:#F3F3F1;--color-text:#1A1A1A;--color-text-muted:#6B6B6B;
+  --color-accent:#8FBF9A;--color-accent-dark:#5A9A72;--color-border:rgba(0,0,0,.08);--color-white:#FFFFFF;
 }
 
 /* theme: minimal — engaged via [data-theme="minimal"] on <html> */
@@ -99,9 +101,9 @@ html{scroll-behavior:smooth}
 body{
   font-family:var(--font-jp);
   color:var(--ink);
-  background:var(--paper);
-  font-size:16px;
-  line-height:1.8;
+  background:var(--color-bg);
+  font-size:15px;
+  line-height:1.9;
   letter-spacing:.02em;
   font-feature-settings:"palt";
   -webkit-font-smoothing:antialiased;
@@ -132,11 +134,11 @@ button{font:inherit}
 
 /* section heading */
 .h-display{
-  font-family:var(--font-jp);
-  font-weight:900;
+  font-family:var(--font-display);
+  font-weight:700;
   font-size:clamp(1.7rem, 3.6vw, 2.6rem);
-  line-height:1.45;
-  letter-spacing:.02em;
+  line-height:1.5;
+  letter-spacing:.04em;
   color:var(--ink);
   margin:0;
   text-shadow: 0 2px 4px rgba(58,74,61,.08);
@@ -284,11 +286,11 @@ button{font:inherit}
 @media (max-width: 920px){ .hero-grid{grid-template-columns:1fr;gap:50px} .hero{padding:120px 0 70px} }
 
 .hero h1{
-  font-family:var(--font-jp);
+  font-family:var(--font-display);
   font-weight:700;
   font-size:clamp(2.1rem, 5.2vw, 3.6rem);
-  line-height:1.3;
-  letter-spacing:-0.01em;
+  line-height:1.4;
+  letter-spacing:.04em;
   margin:24px 0 20px;
   color:var(--ink);
 }
@@ -647,7 +649,7 @@ button{font:inherit}
   display:grid;place-items:center;margin-bottom:20px;
 }
 .strength .ico svg{width:24px;height:24px}
-.strength h3{font-size:1.15rem;margin:0 0 10px;letter-spacing:.03em;font-family:var(--font-jp);font-weight:700}
+.strength h3{font-size:1.15rem;margin:0 0 10px;letter-spacing:.03em;font-family:var(--font-display);font-weight:600}
 .strength p{margin:0;color:var(--ink);font-size:14.5px;line-height:1.85}
 .strength .num{position:absolute;top:14px;right:18px;font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);letter-spacing:.15em}
 
@@ -1870,23 +1872,18 @@ button{font:inherit}
   <div class="hero-grid">
     <div class="hero-text">
       <div class="fv-target-label">
-        飲食店・サロン・個人事業主の方へ
+        神戸市北区・三田・有馬エリアでお店を営むあなたへ。
       </div>
       <div class="fv-pain-text">
-        「ホームページやチラシを作りたいけど何から始めればいいか分からない」<br>
-        「制作会社に頼むと高額で、なかなか踏み出せない」<br>
-        「ITが苦手で、相談できる人がいない」<br>
-        <span class="fv-pain-close">そのお悩み、丁寧にサポートいたします。</span>
+        「チラシを作りたいけど、どこに頼めばいいか分からない」<br>
+        <span class="fv-pain-close">そのお悩み、地元の私たちが丁寧にサポートします。</span>
       </div>
       <span class="eyebrow"><span class="dot"></span><span>Design Studio</span><span class="bar"></span><span>Kobe</span></span>
       <h1>
-        <span class="h1-brand">おりなす.Lab</span> が、<br/>
-        デザインを丸ごと<br/>お<span class="accent">任せ</span>します。
+        神戸北区のお店に、<br/>寄り添う<span class="accent">デザイン</span>を。
       </h1>
       <div class="hero-badges">
-        <span class="hero-badge">夫婦チーム</span>
-        <span class="hero-badge">サービス業現場経験あり</span>
-        <span class="hero-badge">神戸拠点・全国対応</span>
+        <span class="hero-badge">神戸市北区を拠点に、地元の飲食店・サロンを応援する夫婦チームです。</span>
       </div>
       <div class="hero-new-ctas">
         <a class="cta-primary" href="#contact">まずは相談してみる</a>
@@ -2107,7 +2104,7 @@ button{font:inherit}
         <span class="eyebrow"><span class="dot"></span><span>Our Strengths</span></span>
         <h2 class="h-display" style="margin-top:18px">高品質を、<br/><em>圧倒的な納期</em>と<br/>低コストでご提供。</h2>
       </div>
-      <p class="lede">素早くたたき台をつくり、デザイナーが意図と心地よさを編み込みます。<br/>"早い・丁寧・話しやすい"を、ぜんぶ叶えるチームです。</p>
+      <p class="lede">「近くにいる」から、相談しやすい。<br/>神戸北区を拠点に、地元のお店の集客をまるごと支えます。<br/>早い・丁寧・顔が見える。それが私たちの約束です。</p>
     </div>
 
     <!-- process -->
@@ -2510,7 +2507,7 @@ button{font:inherit}
       <article class="test reveal">
 
         <p>夜遅い時間に相談したのに、翌朝にはラフをいただけて驚きました。「ちょっと聞きにくいな」も全部相談できる距離感が嬉しいです。</p>
-        <div class="who"><div class="ava">M</div><div class="who-info"><b>松井さま</b><span>銭湯 / 兵庫県</span></div></div>
+        <div class="who"><div class="ava">M</div><div class="who-info"><b>松井さま</b><span>銭湯 / 神戸市北区</span></div></div>
       </article>
       <article class="test reveal d2">
 
@@ -2604,11 +2601,9 @@ button{font:inherit}
         <span class="eyebrow"><span class="dot"></span><span>About</span></span>
         <h2 class="h-display" style="margin-top:18px">私たちに<em>ついて</em>。</h2>
         <p class="body">
-          <strong>おりなす.Lab</strong> は、夫婦二人で運営する<br/>小さなワンストップ制作会社です。<br/><br/>
-          チラシ・SNS・LP・撮影・ブランディングまで、<br/>"伝わる"をひとつの窓口でサポートします。<br/><br/>
-          大手にはない柔軟さと、<br/>顔の見える温かいコミュニケーションで、<br/>一つひとつの案件にていねいに向き合います。<br/><br/>
-          「こんなこと、相談してもいいですか？」<br/>
-          そんな小さなひと言でも、大歓迎です。
+          おりなす.Lab は、神戸市北区を拠点に活動する夫婦二人の制作チームです。<br/><br/>
+          地元の飲食店・サロン・個人事業主の方が「気軽に相談できる、顔の見えるパートナー」でありたい。そんな思いで、チラシ・SNS・LP・撮影・印刷まで一貫してお手伝いしています。<br/><br/>
+          「こんなこと頼んでいいのかな？」そんな小さなひと言でも、大歓迎です。
         </p>
         <a class="btn-ghost" href="#contact">私たちにご相談ください
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -2630,7 +2625,7 @@ button{font:inherit}
     <div class="contact-grid">
       <div class="contact-info reveal">
         <span class="eyebrow"><span class="dot"></span><span>Contact</span></span>
-        <h2 class="h-display" style="margin-top:18px">まずはお気軽に<br/><em>ご相談ください</em>。</h2>
+        <h2 class="h-display" style="margin-top:18px">神戸北区から、<br/><em>あなたのお店</em>を応援します。</h2>
         <p class="lede">小さなご相談から、お待ちしております。<br/>「こんなこと聞いてもいいのかな？」も大歓迎です。</p>
 
         <a class="contact-channel" href="mailto:info@example.com">
@@ -2735,7 +2730,7 @@ button{font:inherit}
     </div>
     <div class="foot-bot">
       <span>© 2026 おりなす.Lab All rights reserved.</span>
-      <span>Crafted with care, in Kobe.</span>
+      <span>Rooted in Kita-ku, made with care.</span>
     </div>
   </div>
 </footer>
