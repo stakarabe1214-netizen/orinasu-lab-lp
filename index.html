@@ -2103,7 +2103,7 @@ a.topics-item:hover .topics-title {
   }
 }
 
-/* ── 制作の流れ 漫画画像の黒フチ除去（画像外周の焼き込みフチをクロップ） ── */
+/* ── 漫画画像の黒フチ除去（画像外周の焼き込みフチをクロップ） ── */
 .flow-manga {
   overflow: hidden;
   border-radius: 12px;
@@ -2117,6 +2117,19 @@ a.topics-item:hover .topics-title {
   display: block;
   width: 100% !important;
   max-width: none !important;
+  transform: scale(1.025);
+  transform-origin: center;
+}
+.print-art {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.print-art img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: block;
+  width: 100% !important;
   transform: scale(1.025);
   transform-origin: center;
 }
