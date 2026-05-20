@@ -1942,17 +1942,22 @@ html{scroll-padding-top:80px}
   }
 }
 
-/* ── 画像の黒フチ除去 ── */
-#flow img {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
+/* ── 制作の流れ 漫画画像の黒フチ除去（画像外周の焼き込みフチをクロップ） ── */
+.flow-manga {
+  overflow: hidden;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 0 auto;
 }
-.print-art,
-.print-art img {
+.flow-manga img {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  transform: scale(1.025);
+  transform-origin: center;
 }
 
 </style>
@@ -2632,7 +2637,7 @@ html{scroll-padding-top:80px}
 
     <div class="flow-manga reveal">
       <img src="public/images/flow_manga.jpg" alt="制作の流れ — 01 お問い合わせ・ヒアリング → 02 方向性のすり合わせ → 03 デザイン制作・撮影 → 04 ご確認・修正 → 05 納品・運用サポート"
-           style="width:100%;max-width:700px;height:auto;display:block;margin:0 auto;border-radius:12px;">
+           style="height:auto;">
     </div>
   </div>
 </section>
