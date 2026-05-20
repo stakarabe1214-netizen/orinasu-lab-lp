@@ -1,19 +1,61 @@
 <!doctype html>
 <html lang="ja">
 <head>
+<!-- ============================================================
+  ★ サイト設定まとめ（本番公開前に必ずここを確認・更新してください）
+  ============================================================
+
+  【1】本番ドメイン
+       現在の仮設定 : https://tsumugu-design.jp/
+       → 確定したら以下の全箇所を一括検索して置換してください
+         検索文字列 : tsumugu-design.jp
+         対象ファイル: index.html（このファイル）
+
+  【2】LINE 公式アカウント URL
+       現在の仮設定 : href="#contact"（ページ内リンクで代替中）
+       → 確定したら CTRL+F で「TODO: LINE」を検索して全箇所を変更
+
+  【3】メールアドレス
+       現在の仮設定 : info@tsumugu-design.jp
+       → 確定したら CTRL+F で「TODO: EMAIL」を検索して全箇所を変更
+
+  【4】電話番号
+       現在の仮設定 : +81-XX-XXXX-XXXX（JSON-LD内）
+       → 確定したら CTRL+F で「TODO: TEL」を検索して全箇所を変更
+
+  【5】SNS アカウント
+       Twitter/X   : @orinasu_lab（twitter:creator に設定済み）
+       Instagram   : 未設定
+       → 確定したら CTRL+F で「TODO: SNS」を検索して全箇所を変更
+
+  【6】OGP 画像
+       現在の仮設定 : /public/images/ogp.jpg（ファイルが存在するか確認）
+       → 1200×630px の画像を用意してから公開してください
+
+  公開前チェックリスト:
+  [ ] ドメイン確定・canonical / OGP URL を本番ドメインに変更
+  [ ] LINE URL 確定・全CTAボタンに設定
+  [ ] メールアドレス確定・フォーム送信先・JSON-LD に設定
+  [ ] 電話番号確定または削除（JSON-LD の telephone）
+  [ ] OGP画像（ogp.jpg）を本番用に用意・アップロード
+  [ ] Googleビジネスプロフィールと同じ住所・電話番号に統一
+  ============================================================ -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>おりなす.Lab｜チラシ・SNS・LP・撮影を神戸北区の夫婦チームに相談</title>
 <meta name="description" content="神戸市北区の夫婦チームが、地元のお店の販促をまるごとサポート。チラシ・SNS・LP・撮影・大判ポスター印刷まで1枚から対応。単発5,000円〜、月額30,000円〜。まずはLINEで無料相談。" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="language" content="ja" />
+<!-- TODO: 本番ドメイン確定後に https://tsumugu-design.jp/ を本番URLに変更 -->
 <link rel="canonical" href="https://tsumugu-design.jp/" />
 <meta name="theme-color" content="#3d7a38" />
 <!-- Open Graph (Facebook, LinkedIn, etc.) -->
 <meta property="og:type" content="website" />
+<!-- TODO: 本番ドメイン確定後に URL を変更 -->
 <meta property="og:url" content="https://tsumugu-design.jp/" />
 <meta property="og:title" content="おりなす.Lab｜チラシ・SNS・LP・撮影を神戸北区の夫婦チームに相談" />
 <meta property="og:description" content="神戸北区の夫婦チームが地元のお店の販促をまるごと支援。チラシ・SNS・LP・撮影・印刷まで1枚から対応。単発5,000円〜。LINEで無料相談受付中。" />
+<!-- TODO: 本番ドメイン確定後に URL を変更 / OGP画像（1200×630px）を用意してアップロード -->
 <meta property="og:image" content="https://tsumugu-design.jp/public/images/ogp.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,9 +63,11 @@
 <meta property="og:locale" content="ja_JP" />
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
+<!-- TODO: 本番ドメイン確定後に URL を変更 -->
 <meta name="twitter:url" content="https://tsumugu-design.jp/" />
 <meta name="twitter:title" content="おりなす.Lab｜神戸北区の販促制作チーム" />
 <meta name="twitter:description" content="チラシ・SNS・LP・撮影・大判印刷まで。神戸市北区から全国対応。単発5,000円〜、LINEで気軽に相談できます。" />
+<!-- TODO: 本番ドメイン確定後に URL を変更 -->
 <meta name="twitter:image" content="https://tsumugu-design.jp/public/images/ogp.jpg" />
 <meta name="twitter:creator" content="@orinasu_lab" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2292,8 +2336,10 @@ a.topics-item:hover .topics-title {
       "description": "チラシ・SNS・LP・撮影・大判ポスター印刷まで。神戸市北区の夫婦チームが地元のお店の販促をまるごとサポートします。",
       "contactPoint": {
         "@type": "ContactPoint",
+        // TODO: TEL 電話番号確定後に変更（不要なら行ごと削除）
         "telephone": "+81-XX-XXXX-XXXX",
         "contactType": "Customer Service",
+        // TODO: EMAIL メールアドレス確定後に変更
         "email": "info@tsumugu-design.jp"
       },
       "address": {
@@ -2314,6 +2360,7 @@ a.topics-item:hover .topics-title {
         "addressRegion": "兵庫県",
         "addressLocality": "神戸市北区"
       },
+      // TODO: TEL 電話番号確定後に変更（不要なら行ごと削除）
       "telephone": "+81-XX-XXXX-XXXX",
       "url": "https://tsumugu-design.jp/",
       "priceRange": "¥",
@@ -2390,6 +2437,8 @@ a.topics-item:hover .topics-title {
     <p>チラシ1枚から、SNS、LP、撮影、印刷まで。<br class="hero-br">「何から頼めばいいか分からない」神戸市北区の小さなお店が、<br class="hero-br">気軽に頼める販促パートナーです。</p>
     <p style="font-size:0.9rem;color:#6B7A6E;margin-bottom:20px;letter-spacing:0.04em;font-weight:500;">ポスター・チラシ・SNSなど、単発 ¥5,000〜 / 月額 ¥30,000〜 から相談できます</p>
     <div class="hero-cta-wrap">
+      <!-- TODO: LINE LINE公式アカウントURL確定後に href="#contact" を
+           LINEのURLに変更 例: href="https://lin.ee/XXXXXXX" -->
       <a class="hero-cta" href="#contact">LINEで無料相談する</a>
       <p class="hero-cta-note">📩 無理な営業はありません。内容が固まっていなくても大丈夫です。</p>
     </div>
@@ -3213,6 +3262,7 @@ a.topics-item:hover .topics-title {
           <div><div class="lbl">Phone</div><div class="val">XXX-XXXX-XXXX</div></div>
         </a>
 
+        <!-- TODO: LINE LINE公式アカウントURL確定後に href を変更 -->
         <div class="qr-card">
           <div class="qr-mini" aria-hidden="true"></div>
           <div><div class="lbl">LINE QR</div><div class="val">こちらからもお気軽にどうぞ</div></div>
@@ -3310,12 +3360,13 @@ a.topics-item:hover .topics-title {
       </div>
     </div>
     <div class="foot-bot">
-      <span>© 2026 おりなす.Lab All rights reserved.</span>
+      <span>© <span id="copy-year"></span> おりなす.Lab All rights reserved.</span>
       <span>Rooted in Kita-ku, made with care.</span>
     </div>
   </div>
 </footer>
 
+<!-- TODO: LINE LINE公式アカウントURL確定後に href を変更 -->
 <a class="floating-cta" id="floatingCta" href="#contact">
   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   💬 LINEで無料相談
@@ -3969,6 +4020,9 @@ siteNav.classList.toggle('scrolled', window.scrollY > 60);
   /* ── 初期化（Q1を表示） ── */
   restartWizard();
 })();
+
+// 著作権年を自動更新
+document.getElementById('copy-year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
