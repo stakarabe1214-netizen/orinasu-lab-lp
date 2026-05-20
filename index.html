@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
@@ -1943,6 +1943,63 @@ html{scroll-padding-top:80px}
 }
 
 /* ═══════════════════════════════════════
+   スクロールアニメーション（厳選3種）
+   ═══════════════════════════════════════ */
+
+/* ── A. セクション見出し：右からスライドイン ── */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.reveal-right.in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── B. カード類：スケールアップ ── */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.reveal-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── 連鎖表示用ディレイ ── */
+.delay-1 { transition-delay: .12s; }
+.delay-2 { transition-delay: .24s; }
+.delay-3 { transition-delay: .36s; }
+
+/* ── C. ヒーロー初回ロードアニメーション ── */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeScale {
+  from { opacity: 0; transform: scale(1.05); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.hero-content h1        { animation: heroSlideUp .9s cubic-bezier(.2,.7,.2,1) .2s both; }
+.hero-content p         { animation: heroSlideUp .9s cubic-bezier(.2,.7,.2,1) .5s both; }
+.hero-content .hero-cta { animation: heroSlideUp .9s cubic-bezier(.2,.7,.2,1) .7s both; }
+.hero-image img         { animation: heroFadeScale 1.2s cubic-bezier(.2,.7,.2,1) .3s both; }
+
+/* ── アクセシビリティ：動きを減らす設定 ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-right, .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero-content h1, .hero-content p, .hero-content .hero-cta, .hero-image img {
+    animation: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════
    Topics（お知らせ）セクション
    ═══════════════════════════════════════ */
 .topics-section {
@@ -2212,31 +2269,31 @@ a.topics-item:hover .topics-title {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Worries</span></span>
-        <h2 class="h-display" style="margin-top:18px">こんなお悩み、<br/><em>ありませんか？</em></h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">こんなお悩み、<br/><em>ありませんか？</em></h2>
       </div>
       <p class="lede">毎日の発信、商品の魅力づけ、販促ツールの整備──<br/>小さく見えて、後回しにしがちな「販促のもやもや」。<br/>ひとつずつ、一緒に解いていきましょう。</p>
     </div>
 
     <div class="pain-grid">
-      <article class="pain pain-img reveal" style="background-image:url('public/images/NO.01.jpg')">
+      <article class="pain pain-img reveal-scale" style="background-image:url('public/images/NO.01.jpg')">
         <span class="pain-bg-num" aria-hidden="true">01</span>
         <span class="num">№ 01</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <p>チラシやSNS画像を作るのに、毎回時間がかかってしまう。</p>
       </article>
-      <article class="pain pain-img reveal d2" style="background-image:url('public/images/NO.02.jpg')">
+      <article class="pain pain-img reveal-scale delay-1" style="background-image:url('public/images/NO.02.jpg')">
         <span class="pain-bg-num" aria-hidden="true">02</span>
         <span class="num">№ 02</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r=".5" fill="currentColor"/><circle cx="13" cy="10" r=".5" fill="currentColor"/></svg></div>
         <p>お店や商品の魅力が、なかなかうまく伝わらない。</p>
       </article>
-      <article class="pain pain-img reveal d3" style="background-image:url('public/images/NO.03.jpg')">
+      <article class="pain pain-img reveal-scale delay-2" style="background-image:url('public/images/NO.03.jpg')">
         <span class="pain-bg-num" aria-hidden="true">03</span>
         <span class="num">№ 03</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <p>デザイン会社に頼むと、予算的に少し厳しい。</p>
       </article>
-      <article class="pain pain-img reveal d4" style="background-image:url('public/images/NO.04.jpg')">
+      <article class="pain pain-img reveal-scale delay-3" style="background-image:url('public/images/NO.04.jpg')">
         <span class="pain-bg-num" aria-hidden="true">04</span>
         <span class="num">№ 04</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="14" rx="2"/><circle cx="9" cy="13" r="1.2"/><circle cx="15" cy="13" r="1.2"/><path d="M12 2v4M9 20v2M15 20v2"/></svg></div>
@@ -2253,7 +2310,7 @@ a.topics-item:hover .topics-title {
   <div class="wrap">
     <div class="wiz-header">
       <span class="eyebrow"><span class="dot"></span><span>Diagnosis</span></span>
-      <h2 class="h-display" style="margin-top:16px">あなたに<em>ぴったり</em>のプランを。</h2>
+      <h2 class="h-display reveal-right" style="margin-top:16px">あなたに<em>ぴったり</em>のプランを。</h2>
       <p class="wiz-subtitle">3〜4問に答えるだけで、最適なサービスをご提案します。</p>
     </div>
     <div class="wiz-card">
@@ -2285,13 +2342,13 @@ a.topics-item:hover .topics-title {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Services</span></span>
-        <h2 class="h-display" style="margin-top:18px">まるごとお任せ、<br/><span style="white-space:nowrap"><em>ワンストップ</em>のサービス。</span></h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">まるごとお任せ、<br/><span style="white-space:nowrap"><em>ワンストップ</em>のサービス。</span></h2>
       </div>
       <p class="lede">紙ものから、Web、撮影、業務効率化まで。<br/>"伝わる"を作るためのものを、ひとつの窓口で。</p>
     </div>
 
     <div class="svc-grid">
-      <article class="svc reveal">
+      <article class="svc reveal-scale">
         <div class="svc-header">
           <span class="tag">01 / Print</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
@@ -2303,7 +2360,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="svc reveal d2">
+      <article class="svc reveal-scale delay-1">
         <div class="svc-header">
           <span class="tag">02 / Social</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
@@ -2315,7 +2372,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="svc reveal d3">
+      <article class="svc reveal-scale delay-2">
         <div class="svc-header">
           <span class="tag">03 / Web</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
@@ -2327,7 +2384,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="svc reveal">
+      <article class="svc reveal-scale">
         <div class="svc-header">
           <span class="tag">04 / Brand</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></div>
@@ -2339,7 +2396,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="svc reveal d2">
+      <article class="svc reveal-scale delay-1">
         <div class="svc-header">
           <span class="tag">05 / Photo</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
@@ -2351,7 +2408,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="svc reveal d3">
+      <article class="svc reveal-scale delay-2">
         <div class="svc-header">
           <span class="tag">06 / AI</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
@@ -2376,7 +2433,7 @@ a.topics-item:hover .topics-title {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Our Strengths</span></span>
-        <h2 class="h-display" style="margin-top:18px">高品質を、<br/><em>圧倒的な納期</em>と<br/>低コストでご提供。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">高品質を、<br/><em>圧倒的な納期</em>と<br/>低コストでご提供。</h2>
       </div>
       <p class="lede">「近くにいる」から、相談しやすい。<br/>神戸北区を拠点に、地元のお店の集客をまるごと支えます。<br/>早い・丁寧・顔が見える。それが私たちの約束です。</p>
     </div>
@@ -2437,7 +2494,7 @@ a.topics-item:hover .topics-title {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Pricing</span></span>
-        <h2 class="h-display" style="margin-top:18px">料金の<em style="color:#3d7a38">目安</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">料金の<em style="color:#3d7a38">目安</em>。</h2>
       </div>
       <p class="lede">"小さく始めて、続けられる"を大切に。<br/>はじめての方は、まずお気軽にご相談ください。</p>
     </div>
@@ -2670,14 +2727,14 @@ a.topics-item:hover .topics-title {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Works</span></span>
-        <h2 class="h-display" style="margin-top:18px">これまでの<br/><em>制作実績</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">これまでの<br/><em>制作実績</em>。</h2>
       </div>
       <p class="lede">飲食店・温浴・サロン・ECショップなど、地域に根ざした事業者さまを中心にお手伝いしています。<br/>※ 写真は仮の見本です。</p>
     </div>
 
     <div class="works-grid">
 
-      <article class="work reveal">
+      <article class="work reveal-scale">
         <div class="work-img">
           <img src="public/images/case01.png" alt="CASE 01 風呂屋たぬき" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 01</span>
@@ -2688,7 +2745,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="work reveal d2">
+      <article class="work reveal-scale delay-1">
         <div class="work-img">
           <img src="public/images/case02.png" alt="CASE 02 喫茶こもれび" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 02</span>
@@ -2699,7 +2756,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="work reveal d3">
+      <article class="work reveal-scale delay-2">
         <div class="work-img">
           <img src="public/images/case03.png" alt="CASE 03 工房ぬくも堂" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 03</span>
@@ -2710,7 +2767,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="work reveal">
+      <article class="work reveal-scale">
         <div class="work-img">
           <img src="public/images/case04.png" alt="CASE 04 ベーカリー羽根" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 04</span>
@@ -2721,7 +2778,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="work reveal d2">
+      <article class="work reveal-scale delay-1">
         <div class="work-img">
           <img src="public/images/case05.png" alt="CASE 05 整骨院 結" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 05</span>
@@ -2732,7 +2789,7 @@ a.topics-item:hover .topics-title {
         </div>
       </article>
 
-      <article class="work reveal d3">
+      <article class="work reveal-scale delay-2">
         <div class="work-img">
           <img src="public/images/case06.png" alt="CASE 06 旅館 月待" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 06</span>
@@ -2759,7 +2816,7 @@ a.topics-item:hover .topics-title {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Flow</span></span>
-        <h2 class="h-display" style="margin-top:18px">制作の<em>流れ</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">制作の<em>流れ</em>。</h2>
       </div>
       <p class="lede">ご相談から納品まで、最短5日。<br/>各ステップで密にやりとりしながら、安心して進められます。</p>
     </div>
@@ -2777,23 +2834,23 @@ a.topics-item:hover .topics-title {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Voices</span></span>
-        <h2 class="h-display" style="margin-top:18px">お客様の<em>声</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">お客様の<em>声</em>。</h2>
       </div>
       <p class="lede">小さなご相談から始まったお取引が、お店づくりの相棒に。<br/>ありがたいお声をいただいています。</p>
     </div>
 
     <div class="test-grid">
-      <article class="test reveal">
+      <article class="test reveal-scale">
 
         <p>夜遅い時間に相談したのに、翌朝にはラフをいただけて驚きました。「ちょっと聞きにくいな」も全部相談できる距離感が嬉しいです。</p>
         <div class="who"><div class="ava">M</div><div class="who-info"><b>松井さま</b><span>銭湯 / 神戸市北区</span></div></div>
       </article>
-      <article class="test reveal d2">
+      <article class="test reveal-scale delay-1">
 
         <p>AIで案を出してから人の手で仕上げる流れが自然で、料金も納得感がありました。商品の写真がほんとうに美味しそうに撮れていて感激。</p>
         <div class="who"><div class="ava">S</div><div class="who-info"><b>佐伯さま</b><span>飲食店 / 神戸市</span></div></div>
       </article>
-      <article class="test reveal d3">
+      <article class="test reveal-scale delay-2">
 
         <p>大手にお願いするほどではないけれど、自分でやるには少し不安。そんな"ちょうどいい距離"でお願いできるパートナーです。</p>
         <div class="who"><div class="ava">K</div><div class="who-info"><b>木村さま</b><span>個人事業 / 大阪市</span></div></div>
@@ -2808,7 +2865,7 @@ a.topics-item:hover .topics-title {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>FAQ</span></span>
-        <h2 class="h-display" style="margin-top:18px">よくある<em>ご質問</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">よくある<em>ご質問</em>。</h2>
       </div>
       <p class="lede">気になることを、よく聞かれる順に並べました。<br/>ここに答えがなければ、お気軽にご連絡ください。</p>
     </div>
@@ -2830,7 +2887,7 @@ a.topics-item:hover .topics-title {
       <div class="print-text reveal">
         <span class="badge-pill">Small-lot Printing</span>
         <span class="eyebrow"><span class="dot"></span><span>For Local Shops</span></span>
-        <h2 class="h-display" style="margin-top:14px">少量から、<br/><em>大判ポスター</em>も<br/>承ります。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:14px">少量から、<br/><em>大判ポスター</em>も<br/>承ります。</h2>
         <p class="lede" style="margin-top:18px">
           飲食店や商業施設でよく見かける、<br/>
           A4・A3を貼り合わせて作った<b style="font-style:normal;color:var(--terra-deep);font-weight:700">手作りの大判ポスター</b>。<br/>
@@ -2880,7 +2937,7 @@ a.topics-item:hover .topics-title {
 
       <div class="about-text reveal d2">
         <span class="eyebrow"><span class="dot"></span><span>About</span></span>
-        <h2 class="h-display" style="margin-top:18px">私たちに<em>ついて</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">私たちに<em>ついて</em>。</h2>
         <p class="body">
           おりなす.Lab は、神戸市北区を拠点に活動する夫婦二人の制作チームです。<br/><br/>
           地元の飲食店・サロン・個人事業主の方が「気軽に相談できる、顔の見えるパートナー」でありたい。そんな思いで、チラシ・SNS・LP・撮影・印刷まで一貫してお手伝いしています。<br/><br/>
@@ -2906,7 +2963,7 @@ a.topics-item:hover .topics-title {
     <div class="contact-grid">
       <div class="contact-info reveal">
         <span class="eyebrow"><span class="dot"></span><span>Contact</span></span>
-        <h2 class="h-display" style="margin-top:18px">神戸北区から、<br/><em>あなたのお店</em>を応援します。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">神戸北区から、<br/><em>あなたのお店</em>を応援します。</h2>
         <p class="lede">小さなご相談から、お待ちしております。<br/>「こんなこと聞いてもいいのかな？」も大歓迎です。</p>
 
         <a class="contact-channel" href="mailto:info@example.com">
