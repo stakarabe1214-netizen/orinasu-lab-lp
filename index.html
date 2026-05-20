@@ -318,7 +318,10 @@ html{scroll-padding-top:80px}
   margin-bottom:28px;
   color:#1A1A1A;
   text-shadow:none;
-  white-space:normal;
+}
+.hero-line{
+  display:block;
+  white-space:nowrap;
 }
 .hero-content p{
   font-size:16px;
@@ -1895,6 +1898,7 @@ html{scroll-padding-top:80px}
 /* ── Phase 3: mobile adjustments ── */
 @media(max-width:768px){
   .hero-content h1{font-size:26px;line-height:1.55}
+  .hero-line{white-space:normal}
   .site-nav.scrolled{padding:0 16px}
   .pain-bg-num{font-size:80px}
   .svc:hover,.price:hover,.work:hover,.test:hover{
@@ -2006,7 +2010,10 @@ html{scroll-padding-top:80px}
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>神戸北区のお店に、<br>寄り添うデザインを。</h1>
+    <h1>
+      <span class="hero-line">神戸北区のお店に、</span>
+      <span class="hero-line">寄り添うデザインを。</span>
+    </h1>
     <p>チラシ・SNS・LP・撮影・印刷まで。神戸市北区の夫婦チームが、地元のお店の集客をまるごと支えます。</p>
     <a class="hero-cta" href="#contact">まずは相談してみる</a>
   </div>
