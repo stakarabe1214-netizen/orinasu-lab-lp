@@ -282,50 +282,43 @@ html{scroll-padding-top:80px}
 .hero{
   position:relative;
   min-height:100vh;
-  display:flex;
+  display:grid;
+  grid-template-columns:1fr 1fr;
   align-items:center;
   overflow:hidden;
 }
 .hero-bg{
   position:absolute;inset:0;
-  background-image:url('public/images/hero-bg.png');
-  background-size:cover;
-  background-position:center;
+  background-color:#FAFAF9;
 }
 .hero-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(
-    to right,
-    rgba(0,0,0,0.65) 0%,
-    rgba(0,0,0,0.45) 50%,
-    rgba(0,0,0,0.1) 100%
-  );
+  background:transparent;
 }
 .hero-content{
   position:relative;
   z-index:1;
-  max-width:600px;
-  padding:0 60px;
-  color:#ffffff;
+  padding:0 0 0 80px;
+  color:#1A1A1A;
 }
 .hero-content h1{
-  font-size:clamp(32px,5vw,64px);
+  font-size:clamp(32px,4.5vw,60px);
   font-family:'Noto Serif JP',serif;
   font-weight:700;
   line-height:1.4;
-  letter-spacing:0.04em;
+  letter-spacing:.04em;
   margin-bottom:24px;
-  color:#ffffff;
-  text-shadow:0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.8);
+  color:#1A1A1A;
+  text-shadow:none;
   white-space:nowrap;
 }
 .hero-content p{
-  font-size:clamp(13px,1.4vw,16px);
-  color:rgba(255,255,255,0.92);
+  font-size:15px;
+  color:#6B6B6B;
   margin-bottom:40px;
   line-height:1.9;
-  text-shadow:0 1px 8px rgba(0,0,0,0.6);
-  max-width:480px;
+  text-shadow:none;
+  max-width:400px;
 }
 .hero-cta{
   display:inline-block;
@@ -342,8 +335,23 @@ html{scroll-padding-top:80px}
   background:var(--color-accent-dark);
   transform:translateY(-2px);
 }
+.hero-image{
+  position:relative;
+  z-index:1;
+  height:100vh;
+  overflow:hidden;
+}
 @media(max-width:768px){
-  .hero-content{padding:0 24px}
+  .hero{
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+  .hero-content{
+    padding:80px 24px 40px;
+  }
+  .hero-image{
+    height:50vw;
+  }
 }
 .hero-grid{
   position:relative;z-index:2;
@@ -1984,6 +1992,11 @@ html{scroll-padding-top:80px}
     <h1>神戸北区のお店に、寄り添うデザインを。</h1>
     <p>チラシ・SNS・LP・撮影・印刷まで。神戸市北区の夫婦チームが、地元のお店の集客をまるごと支えます。</p>
     <a class="hero-cta" href="#contact">まずは相談してみる</a>
+  </div>
+  <div class="hero-image">
+    <img src="public/images/hero-bg.png"
+         alt="神戸北区の風景"
+         style="width:100%;height:100vh;object-fit:cover;object-position:center;">
   </div>
 </section>
 
