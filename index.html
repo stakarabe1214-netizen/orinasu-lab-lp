@@ -2008,6 +2008,27 @@ html{scroll-padding-top:80px}
   color: var(--ink-soft);
   margin-top: 40px;
 }
+
+/* ─── Works 注意書きボックス ─── */
+.works-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f5f5f0;
+  border-left: 3px solid #3d7a38;
+  border-radius: 6px;
+  padding: 14px 18px;
+  max-width: 640px;
+  margin: 24px auto 48px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+.works-notice-icon {
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
 @media (max-width: 640px) {
   .pricing-guide-cards {
     grid-template-columns: 1fr;
@@ -2845,7 +2866,12 @@ a.topics-item:hover .topics-title {
         <span class="eyebrow"><span class="dot"></span><span>Works</span></span>
         <h2 class="h-display reveal-right" style="margin-top:18px">これまでの<br/><em>制作実績</em>。</h2>
       </div>
-      <p class="lede">飲食店・温浴・サロン・ECショップなど、地域に根ざした事業者さまを中心にお手伝いしています。<br/>※ 写真は仮の見本です。</p>
+      <p class="lede">飲食店・サロン・個人事業主など、地域に根ざした事業者さまへの支援をイメージした制作サンプルを掲載しています。<br/>実案件の掲載準備が整い次第、順次更新予定です。</p>
+    </div>
+
+    <div class="works-notice reveal">
+      <span class="works-notice-icon">📌</span>
+      <p>現在掲載中の事例は、架空の店舗を想定した制作サンプルです。実際の納品物・お客様情報とは異なります。</p>
     </div>
 
     <div class="works-grid">
