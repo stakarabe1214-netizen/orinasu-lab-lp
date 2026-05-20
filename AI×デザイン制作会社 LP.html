@@ -234,12 +234,24 @@ button{font:inherit}
 /* ─────────── site nav bar ─────────── */
 .site-nav{
   position:fixed;top:0;left:0;right:0;z-index:101;
-  background:rgba(242,246,236,.96);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line-warm);
-  box-shadow:0 2px 16px rgba(58,74,61,.07);
+  background:transparent;
+  border-bottom:none;
+  box-shadow:none;
   display:flex;align-items:center;
   padding:0 24px;
+  transition:background .35s ease, box-shadow .35s ease;
 }
+.site-nav.scrolled{
+  background:rgba(250,250,249,.95);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 1px 0 rgba(0,0,0,.06);
+}
+.site-nav:not(.scrolled) .nav-logo img{filter:brightness(0) invert(1)}
+.site-nav:not(.scrolled) a{color:#ffffff}
+.site-nav:not(.scrolled) a:hover{color:rgba(255,255,255,.8);background:rgba(255,255,255,.1)}
+.site-nav.scrolled a{color:var(--ink-soft)}
+html{scroll-padding-top:80px}
 .nav-logo{display:flex;align-items:center;flex-shrink:0;text-decoration:none;padding:8px 12px 8px 0}
 .nav-logo .logo-img{height:34px;width:auto}
 .site-nav-inner{
@@ -253,13 +265,13 @@ button{font:inherit}
 .site-nav a{
   display:inline-block;padding:8px 18px;
   font-family:var(--font-jp);font-size:13px;font-weight:700;
-  color:var(--ink-soft);text-decoration:none;letter-spacing:.06em;
+  text-decoration:none;letter-spacing:.06em;
   border-radius:var(--r-sm);
   touch-action:manipulation;
   transition:color .2s,background .2s;
 }
-.site-nav a:hover{color:var(--terra-deep);background:var(--cream-deep)}
-.site-nav a.nav-active{color:var(--terra-deep);background:var(--cream-deep)}
+.site-nav.scrolled a:hover{color:var(--terra-deep);background:var(--cream-deep)}
+.site-nav.scrolled a.nav-active{color:var(--terra-deep);background:var(--cream-deep)}
 @media(max-width:640px){
   .site-nav{padding:0 12px}
   .nav-logo .logo-img{height:26px}
@@ -270,20 +282,71 @@ button{font:inherit}
 /* ─────────── hero ─────────── */
 .hero{
   position:relative;
-  min-height:max(100vh,820px);
-  padding:140px 0 120px;
-  background:
-    radial-gradient(ellipse 70% 60% at 100% 0%, rgba(244,232,155,.45), transparent 60%),
-    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(143,191,154,.30), transparent 55%),
-    var(--cream);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
   overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('public/images/about-couple.png');
+  background-size:cover;
+  background-position:center;
+}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.45) 0%,
+    rgba(0,0,0,.3) 60%,
+    rgba(0,0,0,.55) 100%
+  );
+}
+.hero-content{
+  position:relative;z-index:1;
+  max-width:760px;
+  padding:0 40px;
+  color:#ffffff;
+}
+.hero-content h1{
+  font-size:clamp(28px,4vw,52px);
+  font-family:'Noto Serif JP',serif;
+  font-weight:700;
+  line-height:1.45;
+  letter-spacing:.04em;
+  margin-bottom:24px;
+  color:#ffffff;
+}
+.hero-content p{
+  font-size:clamp(14px,1.6vw,17px);
+  color:rgba(255,255,255,.85);
+  margin-bottom:40px;
+  line-height:1.8;
+}
+.hero-cta{
+  display:inline-block;
+  padding:16px 40px;
+  background:var(--color-accent);
+  color:#ffffff;
+  text-decoration:none;
+  font-size:15px;font-weight:500;
+  letter-spacing:.06em;
+  border-radius:2px;
+  transition:background .2s ease,transform .2s ease;
+}
+.hero-cta:hover{
+  background:var(--color-accent-dark);
+  transform:translateY(-2px);
+}
+@media(max-width:768px){
+  .hero-content{padding:0 24px}
 }
 .hero-grid{
   position:relative;z-index:2;
   display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;
   max-width:1240px;margin:0 auto;padding:0 32px;
 }
-@media (max-width: 920px){ .hero-grid{grid-template-columns:1fr;gap:50px} .hero{padding:120px 0 70px} }
+@media (max-width: 920px){ .hero-grid{grid-template-columns:1fr;gap:50px} }
 
 .hero h1{
   font-family:var(--font-display);
@@ -350,7 +413,6 @@ button{font:inherit}
 .cta-outline:active{transform:translateY(0)}
 @media(max-width:768px){
   .cta-primary,.cta-outline{width:100%;font-size:17px}
-  .hero{min-height:90vh}
 }
 @media(max-width:600px){
   .hero-new-ctas{flex-direction:column;gap:12px}
@@ -1867,72 +1929,12 @@ button{font:inherit}
 
 <!-- ───────── Hero ───────── -->
 <section class="hero" id="top" data-screen-label="01 Hero">
-  <span class="bg-mark" aria-hidden="true">おりなす.</span>
-
-  <div class="hero-grid">
-    <div class="hero-text">
-      <div class="fv-target-label">
-        神戸市北区・三田・有馬エリアでお店を営むあなたへ。
-      </div>
-      <div class="fv-pain-text">
-        「チラシを作りたいけど、どこに頼めばいいか分からない」<br>
-        <span class="fv-pain-close">そのお悩み、地元の私たちが丁寧にサポートします。</span>
-      </div>
-      <span class="eyebrow"><span class="dot"></span><span>Design Studio</span><span class="bar"></span><span>Kobe</span></span>
-      <h1>
-        神戸北区のお店に、<br/>寄り添う<span class="accent">デザイン</span>を。
-      </h1>
-      <div class="hero-badges">
-        <span class="hero-badge">神戸市北区を拠点に、地元の飲食店・サロンを応援する夫婦チームです。</span>
-      </div>
-      <div class="hero-new-ctas">
-        <a class="cta-primary" href="#contact">まずは相談してみる</a>
-        <a class="cta-outline" href="#pricing">料金を見てみる</a>
-      </div>
-      <p class="sub">
-        原稿作成もサポート。LINE相談可能。<br/>
-        ITが苦手な方でも、丁寧にご対応します。
-      </p>
-      <div class="hero-ctas">
-        <a class="btn" href="#contact">
-          まずはお気軽にご相談ください
-          <span class="arr" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </span>
-        </a>
-        <a class="btn-ghost" href="#services">
-          サービスを見る
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-      <div class="hero-meta">
-        <div><b>01</b> &nbsp;Brand &amp; Print</div>
-        <div><b>02</b> &nbsp;Web &amp; Social</div>
-        <div><b>03</b> &nbsp;Photo &amp; Tech</div>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <p class="slide-caption">制作実績の一部</p>
-      <div class="hero-art">
-        <div class="hero-slide">
-          <img src="public/images/slide-01.jpg" alt="チラシ制作">
-          <span class="slide-label">🖨 チラシ制作</span>
-        </div>
-        <div class="hero-slide">
-          <img src="public/images/slide-02.jpg" alt="SNS素材">
-          <span class="slide-label">📱 SNS素材</span>
-        </div>
-        <div class="hero-slide">
-          <img src="public/images/slide-03.jpg" alt="撮影">
-          <span class="slide-label">📷 撮影</span>
-        </div>
-        <div class="hero-slide">
-          <img src="public/images/slide-04.jpg" alt="LP制作">
-          <span class="slide-label">🖥 LP制作</span>
-        </div>
-      </div>
-    </div>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>神戸北区のお店に、寄り添うデザインを。</h1>
+    <p>チラシ・SNS・LP・撮影・印刷まで。神戸市北区の夫婦チームが、地元のお店の集客をまるごと支えます。</p>
+    <a class="hero-cta" href="#contact">まずは相談してみる</a>
   </div>
 </section>
 
@@ -2805,10 +2807,12 @@ function updateSiteNav(){
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
   hdr.classList.toggle('scrolled', y > 40);
+  siteNav.classList.toggle('scrolled', y > 60);
   if (fc) fc.classList.toggle('show', y > 700);
   updateSiteNav();
 }, {passive:true});
 updateSiteNav();
+siteNav.classList.toggle('scrolled', window.scrollY > 60);
 
 // reveal on scroll
 const io = new IntersectionObserver((entries) => {
