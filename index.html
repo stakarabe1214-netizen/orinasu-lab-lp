@@ -2150,6 +2150,113 @@ a.topics-item:hover .topics-title{color:var(--terra)}
 /* ─ 強み（strength）カード ─ */
 .strength::before{background:linear-gradient(90deg,var(--terra),var(--gold))}
 
+/* ══════════════════════════════════════════════════════════
+   Phase 2 — カード脱均質化 / セクション背景交互 / マーカー強化
+   ══════════════════════════════════════════════════════════ */
+
+/* ─ A. Servicesカード（.svc）脱均質化 ─ */
+.svc {
+  background: var(--color-bg-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(44,38,32,.06);
+}
+.svc-header {
+  border-radius: 6px 6px 0 0;
+  height: 76px;
+}
+/* 奇数・偶数カードに微妙な傾きで手仕事感を */
+.svc-grid .svc:nth-child(odd)  { transform: rotate(-0.4deg); }
+.svc-grid .svc:nth-child(even) { transform: rotate(0.25deg); }
+.svc:hover {
+  transform: rotate(0deg) translateY(-5px) !important;
+  box-shadow: 0 14px 36px rgba(74,107,71,.14) !important;
+  border-color: var(--terra);
+}
+.svc:hover .ico { transform: rotate(-6deg) scale(1.05); }
+
+/* ─ B. Pricingカード通常版 ─ */
+.price {
+  background: var(--color-bg-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+.price:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(44,38,32,.10);
+}
+
+/* ─ B2. 人気プランカード（.price.feat）→ テラコッタ枠に変更 ─ */
+.price.feat {
+  background: #FEFEFE;
+  border: 2px solid var(--color-accent-terracotta) !important;
+  color: var(--ink);
+  transform: scale(1.04);
+  box-shadow: 0 16px 40px rgba(201,123,92,.18);
+}
+.price.feat::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border: 1px dashed var(--color-accent-terracotta);
+  border-radius: 12px;
+  z-index: -1;
+  pointer-events: none;
+}
+.price.feat:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 22px 52px rgba(201,123,92,.25);
+}
+/* featured cardが明色背景になったためテキスト色をリセット */
+.price.feat h3              { color: var(--ink)       !important; }
+.price.feat .amount         { color: var(--ink)       !important; }
+.price.feat .price-cat      { color: var(--ink-faint) !important; }
+.price.feat .price-sub      { color: var(--ink-faint) !important; }
+.price.feat .from           { color: var(--ink-faint) !important; }
+.price.feat ul              { border-top-color: var(--color-border) !important; }
+.price.feat li              { color: var(--ink-soft)  !important; }
+.price.feat li::before      { border-color: var(--terra) !important; }
+.price.feat .price-badge    { background: var(--color-accent-terracotta) !important; }
+
+/* ─ C. セクション背景の交互色付け ─ */
+#pain      { background: var(--color-bg-paper) !important; }
+#services  { background: var(--color-bg-base)  !important; }
+#strengths { background: var(--color-bg-paper) !important; }
+#pricing   { background: var(--color-bg-base)  !important; }
+#works     { background: var(--color-bg-paper) !important; }
+#flow      { background: var(--color-bg-base)  !important; }
+#voices    { background: var(--color-bg-paper) !important; }
+#faq       { background: var(--color-bg-base)  !important; }
+/* print: グラデーション背景を新パレットで更新 */
+#print     {
+  background:
+    radial-gradient(ellipse 70% 60% at 90% 10%, rgba(201,123,92,.18), transparent 60%),
+    var(--color-bg-paper) !important;
+}
+#about     { background: var(--color-bg-base)  !important; }
+
+/* ─ D. マーカーアンダーライン強化（手書き風に） ─ */
+.h-display em::after {
+  height: .3em;
+  opacity: .55;
+  border-radius: 2px;
+  transform: rotate(-0.5deg) skewX(-3deg);
+  transform-origin: left;
+}
+
+/* ─ E. Pricingガイドカード（上部3枚サマリー）調整 ─ */
+.pricing-guide-card {
+  background: var(--color-bg-paper);
+  border-radius: 8px;
+  border-color: var(--color-border);
+}
+.pgc-popular {
+  background: #FEFEFE;
+  border-color: var(--color-accent-terracotta);
+}
+.pgc-badge { color: var(--color-accent-terracotta); }
+.pgc-price { color: var(--color-accent-terracotta); }
+
 /* ── 漫画画像の黒フチ除去（画像外周の焼き込みフチをクロップ） ── */
 .flow-manga {
   overflow: hidden;
