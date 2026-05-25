@@ -604,7 +604,7 @@ html{scroll-padding-top:80px}
 .proc-step h4{font-size:1.2rem;margin:0 18px 8px;font-weight:700;letter-spacing:.03em;font-family:var(--font-jp)}
 .proc-step p{margin:0 18px;color:var(--ink);font-size:14.5px;line-height:1.8}
 .proc-step .ico-big{
-  width:100%;height:200px;margin:0 0 20px;
+  width:100%;aspect-ratio:4/3;height:auto;margin:0 0 20px;
   border-radius:var(--r-md) var(--r-md) 0 0;overflow:hidden;
   background-color:#f5f5f0;
   background-size:cover;
@@ -2189,6 +2189,9 @@ a.topics-item:hover .topics-title{color:var(--terra)}
 }
 
 /* ─ E. Pricingガイドカード（上部3枚サマリー）調整 ─ */
+.pricing-guide-cards {
+  align-items: center;
+}
 .pricing-guide-card {
   background: var(--color-bg-paper);
   border-radius: 8px;
@@ -2196,10 +2199,36 @@ a.topics-item:hover .topics-title{color:var(--terra)}
 }
 .pgc-popular {
   background: #FEFEFE;
-  border-color: var(--color-accent-terracotta);
+  border: 2px solid var(--color-accent-terracotta);
+  transform: scale(1.06);
+  box-shadow: 0 12px 32px rgba(44,38,32,.18), 0 4px 12px rgba(201,123,92,.15);
+  z-index: 2;
+  position: relative;
+}
+.pgc-popular:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 18px 48px rgba(44,38,32,.22), 0 6px 16px rgba(201,123,92,.2);
 }
 .pgc-badge { color: var(--color-accent-terracotta); }
 .pgc-price { color: var(--color-accent-terracotta); }
+.pgc-popular .pgc-badge:first-child {
+  font-size: 0.95rem;
+  padding: 0.4rem 1.2rem;
+  background: var(--color-accent-terracotta);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+@media (max-width: 768px) {
+  .pgc-popular {
+    transform: scale(1);
+  }
+  .pgc-popular:hover {
+    transform: translateY(-4px);
+  }
+}
 
 /* ══════════════════════════════════════════════════════════
    Phase 3 — 装飾仕上げ（テクスチャ / masking tape / レイアウト抑揚）
@@ -2260,6 +2289,12 @@ body {
   .process .proc-step:last-of-type {
     margin-top: 3.5rem;
   }
+  .process .proc-step:nth-child(1) { transform: rotate(-0.4deg); }
+  .process .proc-step:nth-child(3) { transform: rotate(0.4deg); }
+}
+@media (max-width: 720px) {
+  .process .proc-step:nth-child(1),
+  .process .proc-step:nth-child(3) { transform: none; }
 }
 
 /* ─ E. Works写真カードに紙背景を追加（既存transparentからの変更） ─ */
