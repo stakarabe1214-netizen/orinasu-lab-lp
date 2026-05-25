@@ -2257,6 +2257,76 @@ a.topics-item:hover .topics-title{color:var(--terra)}
 .pgc-badge { color: var(--color-accent-terracotta); }
 .pgc-price { color: var(--color-accent-terracotta); }
 
+/* ══════════════════════════════════════════════════════════
+   Phase 3 — 装飾仕上げ（テクスチャ / masking tape / レイアウト抑揚）
+   ══════════════════════════════════════════════════════════ */
+
+/* ─ A. 紙テクスチャ（body背景に薄いノイズ） ─ */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ─ B. Worksカード マスキングテープ装飾 ─ */
+.work {
+  overflow: visible; /* テープがカード上端に飛び出せるよう */
+}
+.work::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 22%;
+  width: 56px;
+  height: 20px;
+  background: rgba(201,123,92,.28);
+  transform: rotate(-3deg);
+  z-index: 2;
+  border-radius: 2px;
+}
+.work:nth-child(3n+2)::before {
+  background: rgba(58,90,124,.25);
+  left: 66%;
+  transform: rotate(4deg);
+}
+.work:nth-child(3n)::before {
+  background: rgba(244,213,141,.5);
+  left: 40%;
+  transform: rotate(-2deg);
+}
+
+/* ─ C. Worriesカード 階段状配置（PCのみ） ─ */
+@media (min-width: 921px) {
+  .pain-grid {
+    align-items: start;
+  }
+  .pain-grid > *:nth-child(2),
+  .pain-grid > *:nth-child(4) {
+    margin-top: 2.5rem;
+  }
+}
+
+/* ─ D. Strengthsプロセス ずらし配置（PCのみ） ─ */
+@media (min-width: 721px) {
+  .process {
+    align-items: start;
+  }
+  .process .arr-big {
+    align-self: center;
+    margin-top: 2rem;
+  }
+  .process .proc-step:last-of-type {
+    margin-top: 3.5rem;
+  }
+}
+
+/* ─ E. Works写真カードに紙背景を追加（既存transparentからの変更） ─ */
+.work {
+  background: var(--color-bg-paper);
+  border-radius: 4px;
+}
+.work-body {
+  padding: 18px 10px 4px;
+}
+
 /* ── 漫画画像の黒フチ除去（画像外周の焼き込みフチをクロップ） ── */
 .flow-manga {
   overflow: hidden;
