@@ -329,7 +329,7 @@ html{scroll-padding-top:80px}
   min-height:100vh;
   display:grid;
   grid-template-columns:1fr 1fr;
-  align-items:stretch;
+  align-items:center;
   overflow:hidden;
 }
 .hero-bg{
@@ -343,14 +343,13 @@ html{scroll-padding-top:80px}
 .hero-content{
   position:relative;
   z-index:1;
-  padding:0 40px 0 8%;
+  padding:0 clamp(2rem,3vw,4rem) 0 clamp(2rem,5vw,6%);
   color:#1A1A1A;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:flex-start;
   min-height:100vh;
-  width:50%;
 }
 .hero-content h1{
   font-size:clamp(36px,4vw,56px);
@@ -406,6 +405,7 @@ html{scroll-padding-top:80px}
   display:block;
 }
 @media(max-width:768px){.hero-br{display:none}}
+@media(max-width:768px){br.pc-only{display:none}}
 @media(max-width:768px){
   .hero{
     grid-template-columns:1fr;
@@ -763,9 +763,10 @@ html{scroll-padding-top:80px}
 .pain-img p{color:#fff;font-size:18px;font-weight:700;line-height:1.7;margin-top:48px}
 
 .pain-closing{
-  margin-top:48px;text-align:center;
-  font-size:1.2rem;color:var(--ink);
+  margin:2.5rem auto 0;text-align:center;
+  font-size:clamp(1.0625rem,1.5vw,1.25rem);color:var(--ink);
   font-family:var(--font-jp);font-weight:500;letter-spacing:.04em;
+  line-height:1.9;
 }
 .pain-closing::before, .pain-closing::after{
   content:"";display:inline-block;width:30px;height:1px;background:var(--terra);vertical-align:middle;margin:0 18px;opacity:.6;
@@ -2436,10 +2437,7 @@ a.topics-item:hover .topics-title {
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>
-      <span class="hero-line">作って終わり、じゃなく。</span>
-      <span class="hero-line">続けられる販促を、一緒に。</span>
-    </h1>
+    <h1>作って終わり、じゃなく。<br class="pc-only">続けられる販促を、一緒に。</h1>
     <p>神戸北区の小さなお店のとなりで、<br class="hero-br">チラシ・SNS・ホームページまでまるごとお手伝いします。</p>
     <p style="font-size:1rem;color:#4A5A4D;margin-bottom:24px;letter-spacing:0.04em;font-weight:600;">ポスター・チラシ・SNSなど、単発 ¥5,000〜 / 月額 ¥30,000〜 から相談できます</p>
     <div class="hero-cta-wrap">
@@ -2487,7 +2485,7 @@ a.topics-item:hover .topics-title {
         <span class="eyebrow"><span class="dot"></span><span>Worries</span></span>
         <h2 class="h-display reveal-right" style="margin-top:18px">こんなお悩み、<br/><em>ありませんか？</em></h2>
       </div>
-      <p class="lede">毎日の発信、商品の魅力づけ、販促ツールの整備──<br/>小さく見えて、後回しにしがちな「販促のもやもや」。<br/>ひとつずつ、一緒に解いていきましょう。</p>
+      <p class="lede">毎日の発信、商品の魅力づけ、販促ツールの整備──<br/>小さく見えて、後回しにしがちな「販促のもやもや」。</p>
     </div>
 
     <div class="pain-grid">
@@ -2517,7 +2515,7 @@ a.topics-item:hover .topics-title {
       </article>
     </div>
 
-    <p class="pain-closing reveal">わかります。私たちも、最初の一歩は同じでした。ひとつずつ、一緒にほどいていきましょう。</p>
+    <p class="pain-closing reveal">わかります。私たちも、最初の一歩は同じでした。<br>ひとつずつ、一緒にほどいていきましょう。</p>
   </div>
 </section>
 
@@ -2751,9 +2749,10 @@ a.topics-item:hover .topics-title {
 
         <div class="pricing-guide-card pgc-popular reveal-scale delay-1">
           <span class="pgc-badge">いちばん人気</span>
+          <span class="pgc-badge">毎月の販促を、ひとつの窓口でまとめたい方へ</span>
           <p class="pgc-name">まるごとお任せプラン</p>
           <p class="pgc-price">¥30,000〜¥80,000</p>
-          <p class="pgc-desc">毎月の販促を、ひとつの窓口でまとめたい方へ　チラシ・SNS素材・撮影など複数まとめて依頼したい方に。窓口ひとつで全部お任せいただけます。</p>
+          <p class="pgc-desc">チラシ・SNS素材・撮影など複数まとめて依頼したい方に。窓口ひとつで全部お任せいただけます。</p>
         </div>
 
         <div class="pricing-guide-card reveal-scale delay-2">
