@@ -568,11 +568,11 @@ html{scroll-padding-top:80px}
 .pain:hover .ico::after{opacity:1;transform:rotate(45deg)}
 .pain p{margin:0;font-size:14.5px;line-height:1.85;color:var(--ink)}
 .pain-img{background-size:cover;background-position:center}
-.pain-img::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(58,74,61,.65) 0%,rgba(58,74,61,.82) 100%);border-radius:inherit;z-index:0}
+.pain-img::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(38,52,40,.75) 0%,rgba(38,52,40,.9) 100%);border-radius:inherit;z-index:0}
 .pain-img>*{position:relative;z-index:1}
 .pain-img .num{color:rgba(255,255,255,.75);font-size:22px;letter-spacing:.1em;display:block;margin-bottom:auto}
 .pain-img .ico{display:none}
-.pain-img p{color:#fff;font-size:18px;font-weight:700;line-height:1.7;margin-top:48px}
+.pain-img p{color:#fff;font-size:18px;font-weight:700;line-height:1.7;margin-top:48px;text-shadow:0 1px 3px rgba(0,0,0,0.4)}
 
 .pain-closing{
   margin:2.5rem auto 0;text-align:center;
@@ -2271,6 +2271,36 @@ body {
   padding: 18px 10px 4px;
 }
 
+/* ─ F. Works見出し — マーカー＋サブタイトル分離 ─ */
+.marker {
+  font-style: normal;
+  color: var(--terra);
+  position: relative;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+.marker::after {
+  content: "";
+  position: absolute;
+  left: -4%; right: -4%; bottom: .02em;
+  height: .3em;
+  background: var(--gold);
+  opacity: .55;
+  z-index: -1;
+  border-radius: 2px;
+  transform: rotate(-0.5deg) skewX(-3deg);
+  transform-origin: left;
+}
+.works__subtitle-inline {
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  display: inline-block;
+  margin-top: 0.4em;
+  letter-spacing: .04em;
+}
+
 /* ── 漫画画像の黒フチ除去（画像外周の焼き込みフチをクロップ） ── */
 .flow-manga {
   overflow: hidden;
@@ -2993,7 +3023,7 @@ body {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Works</span></span>
-        <h2 class="h-display reveal-right" style="margin-top:18px">こんなお店のお手伝いが<br/><em>できます<span class="nowrap">（制作イメージ）</span></em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">こんなお店のお手伝いが<span class="marker">できます</span>。<br><span class="works__subtitle-inline">（制作イメージ）</span></h2>
       </div>
       <p class="lede">神戸北区の飲食店・サロン・個人事業主の方に、こういうものを作れますという見本です。<br/>実案件は2026年6月以降、お客様の許可をいただいたものから順次掲載していきます。</p>
     </div>
