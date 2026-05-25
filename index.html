@@ -1059,29 +1059,6 @@ html{scroll-padding-top:80px}
 .works-foot{margin-top:60px;display:flex;justify-content:center}
 .works-foot .btn-ghost{font-family:var(--font-jp)}
 
-/* ─────────── testimonials ─────────── */
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media (max-width: 920px){ .test-grid{grid-template-columns:1fr} }
-
-.test{
-  background:#fff;border-radius:var(--r-md);padding:32px 30px;
-  border:.5px solid var(--line);
-  position:relative;
-}
-.test .qmark{
-  position:absolute;top:18px;right:24px;
-  font-family:var(--font-jp);font-weight:900;font-size:80px;color:var(--gold-deep);opacity:.7;line-height:.6;
-}
-.test p{margin:0 0 24px;font-size:14.5px;line-height:2;color:var(--ink)}
-.test .who{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--line)}
-.test .ava{
-  width:46px;height:46px;border-radius:50%;
-  background:linear-gradient(135deg,var(--gold),var(--terra-soft));
-  display:grid;place-items:center;color:#fff;font-family:var(--font-jp);font-weight:700;font-size:16px;
-}
-.test .who-info b{display:block;font-size:13px;font-weight:700;letter-spacing:.05em}
-.test .who-info span{font-size:11px;color:var(--ink-soft);font-family:var(--font-mono);letter-spacing:.1em}
-
 /* ─────────── faq ─────────── */
 .faq{max-width:820px;margin:0 auto}
 .faq details{
@@ -1696,7 +1673,7 @@ html{scroll-padding-top:80px}
   }
 }
 
-/* ── 480px 以下（① Nav ② hero-art復元 ⑥ Works/Voices/FAQ） ── */
+/* ── 480px 以下（① Nav ② hero-art復元 ⑥ Works/FAQ） ── */
 @media (max-width: 480px) {
   /* ① Nav */
   .site-nav {
@@ -1730,19 +1707,6 @@ html{scroll-padding-top:80px}
   .work-body .tags {
     font-size: 12.5px;
   }
-  /* ⑥ Voices */
-  .test {
-    padding: 24px 20px;
-  }
-  .test p {
-    font-size: 13.5px;
-    line-height: 1.9;
-  }
-  .test .qmark {
-    font-size: 60px;
-    top: 12px;
-    right: 16px;
-  }
   /* ⑥ FAQ */
   .faq summary {
     font-size: 0.95rem;
@@ -1759,15 +1723,6 @@ html{scroll-padding-top:80px}
     font-size: 12px;
     flex-shrink: 0;
   }
-}
-
-/* ── Phase 3: voices hover ── */
-.test{
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.test:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 32px rgba(0,0,0,.06);
 }
 
 /* ── Phase 3: works image zoom ── */
@@ -1800,7 +1755,7 @@ html{scroll-padding-top:80px}
 @media(max-width:768px){
 .site-nav.scrolled{padding:0 16px}
   .pain-bg-num{font-size:80px}
-  .svc:hover,.price:hover,.work:hover,.test:hover{
+  .svc:hover,.price:hover,.work:hover{
     transform:none;box-shadow:none;
   }
 }
@@ -1896,16 +1851,6 @@ html{scroll-padding-top:80px}
   margin-top: 12px;
   margin-bottom: 0;
   letter-spacing: 0.03em;
-  line-height: 1.8;
-}
-
-/* ─── Voices 注記 ─── */
-.voices-notice {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #A8B0A4;
-  margin-top: 40px;
-  letter-spacing: 0.04em;
   line-height: 1.8;
 }
 
@@ -2225,7 +2170,6 @@ a.topics-item:hover .topics-title{color:var(--terra)}
 #pricing   { background: var(--color-bg-base)  !important; }
 #works     { background: var(--color-bg-paper) !important; }
 #flow      { background: var(--color-bg-base)  !important; }
-#voices    { background: var(--color-bg-paper) !important; }
 #faq       { background: var(--color-bg-base)  !important; }
 /* print: グラデーション背景を新パレットで更新 */
 #print     {
@@ -3152,38 +3096,6 @@ body {
       <img src="public/images/flow_manga.jpg" alt="制作の流れ — 01 お問い合わせ・ヒアリング → 02 方向性のすり合わせ → 03 デザイン制作・撮影 → 04 ご確認・修正 → 05 納品・運用サポート"
            style="height:auto;">
     </div>
-  </div>
-</section>
-
-<!-- ───────── Testimonials ───────── -->
-<section class="section section-cream" id="voices" data-screen-label="09 Voices" style="background:#ffffff">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow"><span class="dot"></span><span>Voices</span></span>
-        <h2 class="h-display reveal-right" style="margin-top:18px">お客様の<em>声</em>。</h2>
-      </div>
-      <p class="lede">小さなご相談から始まったお取引が、お店づくりの相棒に。<br/>ありがたいお声をいただいています。</p>
-    </div>
-
-    <div class="test-grid">
-      <article class="test reveal-scale">
-
-        <p>夜遅い時間に相談したのに、翌朝にはラフをいただけて驚きました。「ちょっと聞きにくいな」も全部相談できる距離感が嬉しいです。</p>
-        <div class="who"><div class="ava">M</div><div class="who-info"><b>松井さま</b><span>銭湯 / 神戸市北区</span></div></div>
-      </article>
-      <article class="test reveal-scale delay-1">
-
-        <p>AIで案を出してから人の手で仕上げる流れが自然で、料金も納得感がありました。商品の写真がほんとうに美味しそうに撮れていて感激。</p>
-        <div class="who"><div class="ava">S</div><div class="who-info"><b>佐伯さま</b><span>飲食店 / 神戸市</span></div></div>
-      </article>
-      <article class="test reveal-scale delay-2">
-
-        <p>大手にお願いするほどではないけれど、自分でやるには少し不安。そんな"ちょうどいい距離"でお願いできるパートナーです。</p>
-        <div class="who"><div class="ava">K</div><div class="who-info"><b>木村さま</b><span>個人事業 / 大阪市</span></div></div>
-      </article>
-    </div>
-    <p class="voices-notice">※ 現在掲載中のお声は、想定されるお客様像をもとにしたイメージです。<br/>実際のご依頼開始後、許可をいただいたお客様の声に順次差し替えてまいります。</p>
   </div>
 </section>
 
