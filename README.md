@@ -292,3 +292,5 @@ MIT License - 自由に使用、修正、配布できます
 - 開発者: Claude Code + おりなす.Lab
 
 created with ❤️ using Claude Code
+
+<!-- Vercel自動デプロイテスト 2026-05-26 -->
