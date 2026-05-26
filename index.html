@@ -211,6 +211,8 @@ button{font:inherit}
   letter-spacing:inherit;
 }
 .nowrap{white-space:nowrap}
+.pc-only{display:inline}
+@media(max-width:768px){.pc-only{display:none}}
 .h-display em::after{
   content:"";
   position:absolute;left:-4%;right:-4%;bottom:.02em;height:.38em;
@@ -1617,6 +1619,8 @@ html{scroll-padding-top:80px}
     font-size: clamp(1.5rem, 6.5vw, 2rem);
     line-height: 1.5;
     letter-spacing: .03em;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
   .lede {
     font-size: 14px;
@@ -1676,6 +1680,17 @@ html{scroll-padding-top:80px}
 
 /* ── 480px 以下（① Nav ② hero-art復元 ⑥ Works/FAQ） ── */
 @media (max-width: 480px) {
+  /* ⓪ 見出し折返し */
+  .h-display {
+    font-size: clamp(1.375rem, 7vw, 1.75rem);
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .hero__title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
   /* ① Nav */
   .site-nav {
     padding: 0 8px;
@@ -3098,7 +3113,7 @@ body {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Works</span></span>
-        <h2 class="h-display reveal-right" style="margin-top:18px">こんなお店のお手伝いが<span class="marker">できます</span>。<br><span class="works__subtitle-inline">（制作イメージ）</span></h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">こんなお店のお手伝いが<span class="marker">できます</span>。<br class="pc-only"><span class="works__subtitle-inline">（制作イメージ）</span></h2>
       </div>
       <p class="lede">神戸北区の飲食店・サロン・個人事業主の方に、こういうものを作れますという見本です。<br/>実案件は2026年6月以降、お客様の許可をいただいたものから順次掲載していきます。</p>
     </div>
