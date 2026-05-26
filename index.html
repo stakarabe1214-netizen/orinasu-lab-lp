@@ -212,7 +212,10 @@ button{font:inherit}
 }
 .nowrap{white-space:nowrap}
 .pc-only{display:inline}
-@media(max-width:768px){.pc-only{display:none}}
+@media(max-width:768px){
+  .pc-only{display:none}
+  .h-display .nowrap{white-space:normal}
+}
 .h-display em::after{
   content:"";
   position:absolute;left:-4%;right:-4%;bottom:.02em;height:.38em;
@@ -2657,7 +2660,7 @@ body {
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Services</span></span>
-        <h2 class="h-display reveal-right" style="margin-top:18px">まるごとお任せ、<br/><span style="white-space:nowrap"><em>ワンストップ</em>のサービス。</span></h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">まるごとお任せ、<br/><span class="nowrap"><em>ワンストップ</em>のサービス。</span></h2>
       </div>
       <p class="lede">紙ものから、Web、撮影、業務効率化まで。<br/>"伝わる"を作るためのものを、ひとつの窓口で。</p>
     </div>
