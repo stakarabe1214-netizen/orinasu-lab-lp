@@ -1,4 +1,4 @@
-# ことほぎデザイン LP プロジェクト ガイド
+# おりなす.Lab LP プロジェクト ガイド
 
 このドキュメントは、LPページ制作からデプロイまでの作業手順をまとめたものです。
 次回以降のLP制作で同じ品質・手順を再現するための参照ガイドとして使用してください。
@@ -7,9 +7,9 @@
 
 ## プロジェクト概要
 
-- **プロジェクト名**: ことほぎデザイン AI×デザイン制作会社 LP
+- **プロジェクト名**: おりなす.Lab LP（AI×デザイン制作会社）
 - **本番URL**: https://lp-project-flame.vercel.app
-- **GitHubリポジトリ**: https://github.com/stakarabe1214-netizen/kotohogi-design-lp
+- **GitHubリポジトリ**: https://github.com/stakarabe1214-netizen/orinasu-lab-lp
 
 ---
 

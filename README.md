@@ -1,4 +1,4 @@
-# Tsumugu - AI × Design Studio
+# おりなす.Lab - AI × Design Studio
 
 高品質なデザイン制作を、AIの速さで実現。神戸市北区の夫婦チーム。
 
@@ -218,7 +218,7 @@ const result = await response.json();
 
 ### ユーザー宛確認メール
 
-- **件名**: ✓ お問い合わせを受け付けました｜Tsumugu
+- **件名**: ✓ お問い合わせを受け付けました｜おりなす.Lab
 - **内容**: 送信内容の確認、ブランディング
 
 ### 管理者宛通知メール
@@ -289,6 +289,6 @@ MIT License - 自由に使用、修正、配布できます
 **プロジェクト情報**
 - 作成: 2026-04-29 (Phase 1)
 - 更新: 2026-04-30 (Phase 2 完成)
-- 開発者: Claude Code + Tsumugu Team
+- 開発者: Claude Code + おりなす.Lab
 
 created with ❤️ using Claude Code

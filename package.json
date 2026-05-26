@@ -1,14 +1,14 @@
 {
   "name": "tsumugu-lp",
   "version": "2.0.0",
-  "description": "AI × デザイン制作会社 Tsumugu ランディングページ with フォーム機能",
+  "description": "AI × デザイン制作会社 おりなす.Lab ランディングページ with フォーム機能",
   "main": "index.js",
   "scripts": {
     "dev": "node -e \"require('dotenv').config(); require('./api/contact.js')\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["design", "ai", "form"],
-  "author": "Tsumugu",
+  "author": "おりなす.Lab",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
