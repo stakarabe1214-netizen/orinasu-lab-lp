@@ -1,20 +1,61 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
+<!-- ============================================================
+  ★ サイト設定まとめ（本番公開前に必ずここを確認・更新してください）
+  ============================================================
+
+  【1】本番ドメイン
+       現在の仮設定 : https://tsumugu-design.jp/
+       → 確定したら以下の全箇所を一括検索して置換してください
+         検索文字列 : tsumugu-design.jp
+         対象ファイル: index.html（このファイル）
+
+  【2】LINE 公式アカウント URL
+       現在の仮設定 : href="#contact"（ページ内リンクで代替中）
+       → 確定したら CTRL+F で「TODO: LINE」を検索して全箇所を変更
+
+  【3】メールアドレス
+       現在の仮設定 : info@tsumugu-design.jp
+       → 確定したら CTRL+F で「TODO: EMAIL」を検索して全箇所を変更
+
+  【4】電話番号
+       現在の仮設定 : +81-XX-XXXX-XXXX（JSON-LD内）
+       → 確定したら CTRL+F で「TODO: TEL」を検索して全箇所を変更
+
+  【5】SNS アカウント
+       Twitter/X   : @orinasu_lab（twitter:creator に設定済み）
+       Instagram   : 未設定
+       → 確定したら CTRL+F で「TODO: SNS」を検索して全箇所を変更
+
+  【6】OGP 画像
+       現在の仮設定 : /public/images/ogp.jpg（ファイルが存在するか確認）
+       → 1200×630px の画像を用意してから公開してください
+
+  公開前チェックリスト:
+  [ ] ドメイン確定・canonical / OGP URL を本番ドメインに変更
+  [ ] LINE URL 確定・全CTAボタンに設定
+  [ ] メールアドレス確定・フォーム送信先・JSON-LD に設定
+  [ ] 電話番号確定または削除（JSON-LD の telephone）
+  [ ] OGP画像（ogp.jpg）を本番用に用意・アップロード
+  [ ] Googleビジネスプロフィールと同じ住所・電話番号に統一
+  ============================================================ -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>おりなす.Lab — 伝わる販促物を、もっと早く、もっと身近に。</title>
-<meta name="description" content="スピード感とデザイナーの丁寧な仕上がり。チラシ・SNS・LP・撮影・ブランディングまでワンストップ。神戸市北区拠点・全国対応の夫婦チーム。" />
-<meta name="keywords" content="デザイン制作会社,AI活用,ランディングページ,チラシ制作,神戸,夫婦チーム,販促物,ブランディング,撮影" />
+<title>おりなす.Lab｜チラシ・SNS・LP・撮影を神戸北区の夫婦チームに相談</title>
+<meta name="description" content="神戸市北区の夫婦チームが、地元のお店の販促をまるごとサポート。チラシ・SNS・LP・撮影・大判ポスター印刷まで1枚から対応。単発5,000円〜、月額30,000円〜。まずはLINEで無料相談。" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="language" content="ja" />
+<!-- TODO: 本番ドメイン確定後に https://tsumugu-design.jp/ を本番URLに変更 -->
 <link rel="canonical" href="https://tsumugu-design.jp/" />
-<meta name="theme-color" content="#8FBF9A" />
+<meta name="theme-color" content="#4A6B47" />
 <!-- Open Graph (Facebook, LinkedIn, etc.) -->
 <meta property="og:type" content="website" />
+<!-- TODO: 本番ドメイン確定後に URL を変更 -->
 <meta property="og:url" content="https://tsumugu-design.jp/" />
-<meta property="og:title" content="おりなす.Lab — 伝わる販促物を、もっと早く、もっと身近に。" />
-<meta property="og:description" content="スピード感とデザイナーの丁寧な仕上がり。チラシ・SNS・LP・撮影・ブランディングまでワンストップ。神戸市北区拠点・全国対応の夫婦チーム。" />
+<meta property="og:title" content="おりなす.Lab｜チラシ・SNS・LP・撮影を神戸北区の夫婦チームに相談" />
+<meta property="og:description" content="神戸北区の夫婦チームが地元のお店の販促をまるごと支援。チラシ・SNS・LP・撮影・印刷まで1枚から対応。単発5,000円〜。LINEで無料相談受付中。" />
+<!-- TODO: 本番ドメイン確定後に URL を変更 / OGP画像（1200×630px）を用意してアップロード -->
 <meta property="og:image" content="https://tsumugu-design.jp/public/images/ogp.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -22,49 +63,65 @@
 <meta property="og:locale" content="ja_JP" />
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
+<!-- TODO: 本番ドメイン確定後に URL を変更 -->
 <meta name="twitter:url" content="https://tsumugu-design.jp/" />
-<meta name="twitter:title" content="おりなす.Lab" />
-<meta name="twitter:description" content="デザイナーの力で、伝わる販促物を。神戸市北区の夫婦チーム。" />
+<meta name="twitter:title" content="おりなす.Lab｜神戸北区の販促制作チーム" />
+<meta name="twitter:description" content="チラシ・SNS・LP・撮影・大判印刷まで。神戸市北区から全国対応。単発5,000円〜、LINEで気軽に相談できます。" />
+<!-- TODO: 本番ドメイン確定後に URL を変更 -->
 <meta name="twitter:image" content="https://tsumugu-design.jp/public/images/ogp.jpg" />
 <meta name="twitter:creator" content="@orinasu_lab" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=DM+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
 
 <style>
-/* ─────────── tokens (botanical green, BOTANIST Baby–inspired) ─────────── */
+/* ─────────── editorial tokens (手仕事エディトリアル 2026) ─────────── */
 :root{
-  --terra: #8FBF9A;          /* sage green — primary */
-  --terra-deep: #5E9A6E;     /* deep leaf */
-  --terra-soft: #C7E0CC;     /* mint mist */
-  --cream: #F2F6EC;          /* warm ivory-green */
-  --cream-deep: #E5EFD9;     /* deeper green-cream */
-  --gold: #F4E89B;           /* soft butter yellow */
-  --gold-deep: #D9C766;      /* mustard accent */
-  --ink: #3A4A3D;            /* dark leaf ink */
-  --ink-soft: #6B7A6E;
-  --ink-faint: #A8B0A4;
-  --paper: #FBFCF6;          /* off-white paper */
-  --line: rgba(58,74,61,.10);
-  --line-warm: rgba(94,154,110,.20);
-  --leaf-1: #BFD9B7;          /* light leaf */
-  --leaf-2: #94C19E;          /* mid leaf */
-  --leaf-3: #5E9A6E;          /* deep leaf */
-  --berry: #E2A6A6;           /* soft pink berry accent */
-  --shadow-sm: 0 1px 2px rgba(58,74,61,.05), 0 4px 14px rgba(58,74,61,.06);
-  --shadow-md: 0 1px 2px rgba(58,74,61,.06), 0 18px 40px rgba(58,74,61,.10);
-  --shadow-lg: 0 2px 4px rgba(58,74,61,.07), 0 30px 70px rgba(58,74,61,.14);
+  /* ─── editorial palette ─── */
+  --color-bg-base: #FAF6F0;
+  --color-bg-paper: #F4ECDE;
+  --color-bg-dark: #2C2620;
+  --color-primary: #4A6B47;
+  --color-primary-dark: #3A5638;
+  --color-accent-terracotta: #C97B5C;
+  --color-accent-indigo: #3A5A7C;
+  --color-accent-marker: #F4D58D;
+  --color-text-primary: #2C2620;
+  --color-text-secondary: #5C544A;
+  --color-text-muted: #8A8278;
+  --color-border: #D9CDB8;
+
+  /* ─── legacy tokens (overridden to match editorial palette) ─── */
+  --terra: #4A6B47;
+  --terra-deep: #3A5638;
+  --terra-soft: rgba(74,107,71,.15);
+  --cream: #FAF6F0;
+  --cream-deep: #F4ECDE;
+  --gold: #F4D58D;
+  --gold-deep: #D4A84B;
+  --ink: #2C2620;
+  --ink-soft: #5C544A;
+  --ink-faint: #8A8278;
+  --paper: #FAF6F0;
+  --line: rgba(44,38,32,.08);
+  --line-warm: rgba(74,107,71,.18);
+  --leaf-1: rgba(74,107,71,.10);
+  --leaf-2: rgba(74,107,71,.30);
+  --leaf-3: #4A6B47;
+  --shadow-sm: 0 1px 2px rgba(44,38,32,.05), 0 4px 14px rgba(44,38,32,.06);
+  --shadow-md: 0 1px 2px rgba(44,38,32,.06), 0 18px 40px rgba(44,38,32,.10);
+  --shadow-lg: 0 2px 4px rgba(44,38,32,.07), 0 30px 70px rgba(44,38,32,.14);
   --r-sm: 10px;
   --r-md: 18px;
   --r-lg: 28px;
   --r-xl: 40px;
-  --font-jp: "Noto Sans JP", sans-serif;
+  --font-jp: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+  --font-display: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
   --font-mono: "DM Mono", monospace;
-  --font-display: "Noto Serif JP", serif;
-  --font-hand-jp: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
-  --font-hand-en: "DM Mono", monospace;
-  --color-bg:#FAFAF9;--color-bg-alt:#F3F3F1;--color-text:#1A1A1A;--color-text-muted:#6B6B6B;
-  --color-accent:#8FBF9A;--color-accent-dark:#5A9A72;--color-border:rgba(0,0,0,.08);--color-white:#FFFFFF;
+  --font-hand-jp: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+  --font-hand-en: "Caveat", cursive;
+  --color-bg:#FAF6F0;--color-bg-alt:#F4ECDE;--color-text:#2C2620;--color-text-muted:#5C544A;
+  --color-accent:#4A6B47;--color-accent-dark:#3A5638;--color-border:#D9CDB8;--color-white:#FFFFFF;
 }
 
 /* theme: minimal — engaged via [data-theme="minimal"] on <html> */
@@ -82,27 +139,28 @@ html[data-theme="minimal"]{
   --paper: #FAFAF6;
   --line: rgba(20,16,14,.08);
   --line-warm: rgba(20,16,14,.12);
-  --leaf-1: #D6D8CF; --leaf-2: #A4A99E; --leaf-3: #5C6357; --berry:#B8B0A6;
+  --leaf-1: rgba(61,122,56,.12); --leaf-2: rgba(61,122,56,.35); --leaf-3: #3d7a38;
 }
 
 /* font swap */
-html[data-font="mincho"]{ --font-display: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif; }
+html[data-font="mincho"]{ --font-display: "Zen Kaku Gothic New", sans-serif; }
 html[data-font="noto"]{
-  --font-jp: "Noto Sans JP", sans-serif;
-  --font-display: "Noto Sans JP", sans-serif;
+  --font-jp: "Zen Kaku Gothic New", sans-serif;
+  --font-display: "Zen Kaku Gothic New", sans-serif;
 }
 html[data-font="hand"]{
-  --font-display: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  --font-display: "Zen Kaku Gothic New", sans-serif;
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html,body{margin:0;padding:0}
+html,body{margin:0;padding:0;overflow-x:hidden}
 html{scroll-behavior:smooth}
 body{
   font-family:var(--font-jp);
   color:var(--ink);
   background:var(--color-bg);
-  font-size:15px;
+  font-size:16px;
+  font-weight:400;
   line-height:1.9;
   letter-spacing:.02em;
   font-feature-settings:"palt";
@@ -118,42 +176,49 @@ button{font:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
 .wrap-tight{max-width:980px;margin:0 auto;padding:0 28px}
 
-/* small caps eyebrow */
+/* handwritten eyebrow label (editorial 2026) */
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;
-  font-family:var(--font-hand-en);
-  font-size:16px;  /* 18px → 16px */
-  letter-spacing:.08em;  /* .05em → .08em */
-  color:#3d7a38;
-  font-weight:700;
-  text-transform:uppercase;
-  opacity:.9;
+  font-family:'Caveat', cursive;
+  font-size:1.5rem;
+  letter-spacing:.05em;
+  color:var(--color-accent-terracotta);
+  font-weight:500;
+  text-transform:lowercase;
+  opacity:1;
 }
-.eyebrow .dot{width:5px;height:5px;border-radius:50%;background:#3d7a38;box-shadow:0 0 0 4px rgba(61,122,56,.18)}
+.eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--color-accent-terracotta);box-shadow:0 0 0 4px rgba(201,123,92,.18)}
 .eyebrow .bar{width:28px;height:1px;background:currentColor;opacity:.4}
 
 /* section heading */
 .h-display{
-  font-family:var(--font-display);
+  font-family:'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
   font-weight:700;
   font-size:clamp(1.7rem, 3.6vw, 2.6rem);
   line-height:1.5;
-  letter-spacing:.04em;
+  letter-spacing:.03em;
   color:var(--ink);
   margin:0;
-  text-shadow: 0 2px 4px rgba(58,74,61,.08);
+  word-break:keep-all;
+  overflow-wrap:normal;
 }
 .h-display em{
   font-style:normal;
-  color:#3d7a38;
+  color:var(--terra);
   position:relative;
   font-family:inherit;
   font-weight:inherit;
   letter-spacing:inherit;
 }
+.nowrap{white-space:nowrap}
+.pc-only{display:inline}
+@media(max-width:768px){
+  .pc-only{display:none}
+  .h-display .nowrap{white-space:normal}
+}
 .h-display em::after{
   content:"";
-  position:absolute;left:-4%;right:-4%;bottom:.02em;height:.45em;
+  position:absolute;left:-4%;right:-4%;bottom:.02em;height:.38em;
   background:var(--gold);
   opacity:.45;  /* 0.32 → 0.45 */
   z-index:-1;
@@ -234,7 +299,9 @@ button{font:inherit}
 /* ─────────── site nav bar ─────────── */
 .site-nav{
   position:fixed;top:0;left:0;right:0;z-index:101;
-  background:transparent;
+  background:rgba(250,250,249,0.95);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
   border-bottom:none;
   box-shadow:none;
   display:flex;align-items:center;
@@ -247,9 +314,9 @@ button{font:inherit}
   -webkit-backdrop-filter:blur(10px);
   box-shadow:0 1px 0 rgba(0,0,0,.06);
 }
-.site-nav:not(.scrolled) .nav-logo img{filter:brightness(0) invert(1)}
-.site-nav:not(.scrolled) a{color:#ffffff}
-.site-nav:not(.scrolled) a:hover{color:rgba(255,255,255,.8);background:rgba(255,255,255,.1)}
+.site-nav:not(.scrolled) .nav-logo img{filter:none}
+.site-nav:not(.scrolled) a{color:#1A1A1A}
+.site-nav:not(.scrolled) a:hover{color:var(--terra-deep);background:var(--cream-deep)}
 .site-nav.scrolled a{color:var(--ink-soft)}
 html{scroll-padding-top:80px}
 .nav-logo{display:flex;align-items:center;flex-shrink:0;text-decoration:none;padding:8px 12px 8px 0}
@@ -282,104 +349,125 @@ html{scroll-padding-top:80px}
 /* ─────────── hero ─────────── */
 .hero{
   position:relative;
-  min-height:100vh;
+  width:100%;
+  min-height:90vh;
+  max-height:800px;
+  overflow:hidden;
   display:flex;
   align-items:center;
-  overflow:hidden;
+  justify-content:center;
 }
-.hero-bg{
-  position:absolute;inset:0;
-  background-image:url('public/images/about-couple.png');
-  background-size:cover;
-  background-position:center;
+.hero__bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
 }
-.hero-overlay{
-  position:absolute;inset:0;
+.hero__bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:0.30;
+  filter:sepia(0.15);
+  display:block;
+}
+.hero__overlay{
+  position:absolute;
+  inset:0;
   background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,.45) 0%,
-    rgba(0,0,0,.3) 60%,
-    rgba(0,0,0,.55) 100%
+    180deg,
+    rgba(255,255,255,0.55) 0%,
+    rgba(255,255,255,0.78) 50%,
+    rgba(255,255,255,0.62) 100%
   );
 }
-.hero-content{
-  position:relative;z-index:1;
-  max-width:760px;
-  padding:0 40px;
-  color:#ffffff;
+.hero__content{
+  position:relative;
+  z-index:1;
+  max-width:820px;
+  width:100%;
+  padding:clamp(5rem,10vh,8rem) clamp(1.5rem,5vw,3rem);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1.5rem;
 }
-.hero-content h1{
-  font-size:clamp(28px,4vw,52px);
-  font-family:'Noto Serif JP',serif;
-  font-weight:700;
-  line-height:1.45;
-  letter-spacing:.04em;
-  margin-bottom:24px;
-  color:#ffffff;
-}
-.hero-content p{
-  font-size:clamp(14px,1.6vw,17px);
-  color:rgba(255,255,255,.85);
-  margin-bottom:40px;
-  line-height:1.8;
-}
-.hero-cta{
-  display:inline-block;
-  padding:16px 40px;
-  background:var(--color-accent);
-  color:#ffffff;
-  text-decoration:none;
-  font-size:15px;font-weight:500;
+.hero__title{
+  font-size:clamp(1.75rem,3.6vw,2.75rem);
+  line-height:1.5;
+  font-weight:900;
+  word-break:normal;
+  overflow-wrap:normal;
+  line-break:strict;
+  color:var(--ink);
+  margin:0;
+  font-family:'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif;
   letter-spacing:.06em;
-  border-radius:2px;
-  transition:background .2s ease,transform .2s ease;
 }
-.hero-cta:hover{
-  background:var(--color-accent-dark);
+.hero__subtitle{
+  font-size:clamp(0.95rem,1.4vw,1.125rem);
+  line-height:1.9;
+  color:#333;
+  margin:0;
+  font-family:var(--font-jp);
+}
+.hero__price{
+  font-size:0.875rem;
+  color:#555;
+  margin:0;
+  font-family:var(--font-jp);
+  font-weight:500;
+  letter-spacing:.04em;
+}
+.hero__note{
+  font-size:0.8125rem;
+  color:#666;
+  margin:0;
+  font-family:var(--font-jp);
+}
+.hero__cta{
+  display:inline-block;
+  padding:1rem 2.5rem;
+  background:var(--terra);
+  color:#fff;
+  font-weight:700;
+  font-family:var(--font-jp);
+  border-radius:50px;
+  text-decoration:none;
+  font-size:16px;
+  letter-spacing:.06em;
+  box-shadow:0 6px 16px rgba(201,123,92,0.35), 0 2px 6px rgba(0,0,0,0.08);
+  transition:transform .2s,box-shadow .2s,background .2s;
+}
+.hero__cta:hover{
+  background:#B56A4D;
   transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(201,123,92,0.45), 0 4px 10px rgba(0,0,0,0.12);
 }
 @media(max-width:768px){
-  .hero-content{padding:0 24px}
+  .hero{
+    min-height:100vh;
+    max-height:none;
+  }
+  .hero__title{
+    font-size:1.625rem;
+    letter-spacing:.01em;
+  }
+  .hero__subtitle br{
+    display:none;
+  }
+  .hero__cta{
+    width:100%;
+    text-align:center;
+    padding:1rem 1.5rem;
+  }
 }
-.hero-grid{
-  position:relative;z-index:2;
-  display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;
-  max-width:1240px;margin:0 auto;padding:0 32px;
-}
-@media (max-width: 920px){ .hero-grid{grid-template-columns:1fr;gap:50px} }
-
-.hero h1{
-  font-family:var(--font-display);
-  font-weight:700;
-  font-size:clamp(2.1rem, 5.2vw, 3.6rem);
-  line-height:1.4;
-  letter-spacing:.04em;
-  margin:24px 0 20px;
-  color:var(--ink);
-}
-.hero h1 .accent{
-  color:var(--terra-deep);
-  font-family:inherit;font-weight:inherit;
-  position:relative;display:inline-block;
-}
-.hero h1 .accent::after{
-  content:"";position:absolute;left:-4%;right:-4%;bottom:.08em;height:.4em;
-  background:var(--gold);opacity:.4;z-index:-1;border-radius:3px;
-  transform-origin:left;animation:underline 1.4s cubic-bezier(.7,0,.3,1) .8s both;
-}
-@keyframes underline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.h1-brand{color:var(--terra-deep);font-style:normal;letter-spacing:.02em}
-.hero .sub{
-  font-size:clamp(.95rem,1.15vw,1.08rem);
-  line-height:2;color:var(--ink-soft);
-  max-width:30em;margin:0 0 36px;
-}
-.hero-ctas{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-
-/* ─── hero new CTAs ─── */
-.hero-new-ctas{
-  display:flex;gap:16px;flex-wrap:wrap;
-  margin-top:32px;
+@media(max-width:375px){
+  .hero h1,
+  .hero__title{font-size:1.125rem;letter-spacing:0}
+  .h-display{font-size:1.125rem}
+  .hero__content{padding:4rem 1.25rem}
 }
 .cta-primary{
   display:inline-flex;align-items:center;justify-content:center;
@@ -400,14 +488,14 @@ html{scroll-padding-top:80px}
 .cta-outline{
   display:inline-flex;align-items:center;justify-content:center;
   padding:18px 48px;
-  background:transparent;color:#6aaa64;
-  border:2px solid #6aaa64;border-radius:50px;
+  background:transparent;color:#3d7a38;
+  border:2px solid #3d7a38;border-radius:50px;
   font-family:var(--font-jp);font-size:16px;font-weight:700;
   text-decoration:none;letter-spacing:.04em;
   transition:background .25s, transform .3s cubic-bezier(.2,.8,.2,1);
 }
 .cta-outline:hover{
-  background:rgba(106,170,100,.08);
+  background:rgba(61,122,56,.08);
   transform:translateY(-2px);
 }
 .cta-outline:active{transform:translateY(0)}
@@ -419,154 +507,6 @@ html{scroll-padding-top:80px}
   .cta-primary,.cta-outline{width:100%}
 }
 
-/* hero stats / micro */
-.hero-meta{
-  display:flex;gap:28px;margin-top:56px;padding-top:28px;
-  border-top:1px solid var(--line-warm);
-  font-family:var(--font-mono);font-size:11px;letter-spacing:.15em;color:var(--ink-soft);text-transform:uppercase;
-  flex-wrap:wrap;
-}
-.hero-meta b{color:var(--terra-deep);font-weight:500}
-
-/* ─── hero fv target / pain ─── */
-.fv-target-label{
-  display:inline-block;
-  background:rgba(106,170,100,.15);
-  color:#3d7a38;
-  font-family:'Zen Kaku Gothic New','Noto Sans JP',sans-serif;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:.08em;
-  padding:6px 18px;
-  border-radius:50px;
-  margin-bottom:20px;
-}
-.fv-pain-text{
-  font-family:'Zen Kaku Gothic New','Noto Sans JP',sans-serif;
-  font-size:15px;
-  font-weight:400;
-  color:#3d3d3d;
-  line-height:2.0;
-  margin-bottom:24px;
-}
-.fv-pain-close{
-  display:block;
-  margin-top:10px;
-  font-size:16px;
-  font-weight:700;
-  color:#1a1a1a;
-}
-@media(max-width:768px){
-  .fv-target-label{font-size:12px;padding:5px 14px;margin-bottom:12px}
-  .fv-pain-text{display:none}
-  .fv-pain-close{display:none}
-}
-
-/* ─── hero badges ─── */
-.hero-badges{
-  display:flex;flex-wrap:wrap;gap:8px;
-  margin:0 0 24px;
-}
-.hero-badge{
-  display:inline-flex;align-items:center;
-  font-size:12px;font-weight:600;
-  color:var(--terra-deep);
-  background:rgba(143,191,154,.14);
-  border:1px solid rgba(143,191,154,.38);
-  padding:4px 12px;border-radius:50px;
-  letter-spacing:.04em;
-  font-family:var(--font-jp);
-}
-@media(max-width:480px){
-  .hero-badges{gap:6px}
-  .hero-badge{font-size:11px;padding:3px 10px}
-}
-
-/* ─── hero visual column ─── */
-.hero-visual{display:flex;flex-direction:column;align-items:flex-end}
-.slide-caption{
-  font-size:11px;
-  font-family:var(--font-mono);
-  color:var(--ink-faint);
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  margin:0 0 8px;
-  align-self:flex-end;
-}
-@media(max-width:768px){.slide-caption{display:none}}
-
-/* ─── hero image slideshow ─── */
-.hero-art{
-  position:relative;
-  width:125%;max-width:710px;
-  height:600px;
-  margin-left:auto;
-  overflow:hidden;
-  border-radius:0;
-  -webkit-mask-image:radial-gradient(ellipse 88% 85% at 55% 50%, black 45%, transparent 100%);
-  mask-image:radial-gradient(ellipse 88% 85% at 55% 50%, black 45%, transparent 100%);
-}
-@media(max-width:768px){.hero-art{width:100%;height:320px;max-width:100%}}
-@media(max-width:480px){.hero-art{display:none}}
-
-@keyframes heroFade{
-  0%    {opacity:1}
-  18%   {opacity:1;animation-timing-function:ease-in}
-  25%   {opacity:0}
-  100%  {opacity:0}
-}
-
-.hero-slide{
-  position:absolute;inset:0;
-  opacity:0;
-  animation:heroFade 28s linear infinite;
-}
-.hero-slide img{
-  width:100%;height:100%;
-  object-fit:cover;display:block;
-}
-.hero-slide:nth-child(1){animation-delay:0s}
-.hero-slide:nth-child(2){animation-delay:-21s}
-.hero-slide:nth-child(3){animation-delay:-14s}
-.hero-slide:nth-child(4){animation-delay:-7s}
-
-.slide-label{
-  position:absolute;bottom:16px;left:16px;
-  background:rgba(255,255,255,.92);
-  color:var(--terra-deep);
-  font-family:var(--font-hand-jp);
-  font-size:13px;font-weight:600;
-  padding:6px 14px;border-radius:999px;
-  box-shadow:0 2px 12px rgba(0,0,0,.12);
-  letter-spacing:.05em;
-  backdrop-filter:blur(4px);
-}
-
-
-/* couple silhouettes */
-.couple{
-  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
-  width:42%;
-}
-
-/* hero noise texture */
-.hero::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:radial-gradient(circle, rgba(94,154,110,.10) 1px, transparent 1px);
-  background-size:22px 22px;
-  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
-  -webkit-mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
-}
-
-/* big background mark */
-.bg-mark{
-  position:absolute;font-family:var(--font-mono);font-weight:500;
-  font-size:clamp(80px, 14vw, 200px);
-  letter-spacing:-.02em;
-  color:var(--terra);opacity:.06;
-  bottom:-30px;left:-20px;line-height:.8;pointer-events:none;
-  z-index:1;
-}
 
 /* ─────────── generic section ─────────── */
 .section{padding:120px 0;position:relative}
@@ -637,16 +577,17 @@ html{scroll-padding-top:80px}
 .pain:hover .ico::after{opacity:1;transform:rotate(45deg)}
 .pain p{margin:0;font-size:14.5px;line-height:1.85;color:var(--ink)}
 .pain-img{background-size:cover;background-position:center}
-.pain-img::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(58,74,61,.65) 0%,rgba(58,74,61,.82) 100%);border-radius:inherit;z-index:0}
+.pain-img::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(38,52,40,.55) 0%,rgba(38,52,40,.72) 100%);border-radius:inherit;z-index:0}
 .pain-img>*{position:relative;z-index:1}
 .pain-img .num{color:rgba(255,255,255,.75);font-size:22px;letter-spacing:.1em;display:block;margin-bottom:auto}
 .pain-img .ico{display:none}
-.pain-img p{color:#fff;font-size:18px;font-weight:700;line-height:1.7;margin-top:48px}
+.pain-img p{color:#fff;font-size:18px;font-weight:700;line-height:1.7;margin-top:48px;text-shadow:0 1px 3px rgba(0,0,0,0.4)}
 
 .pain-closing{
-  margin-top:48px;text-align:center;
-  font-size:1.2rem;color:var(--ink);
+  margin:2.5rem auto 0;text-align:center;
+  font-size:clamp(1.0625rem,1.5vw,1.25rem);color:var(--ink);
   font-family:var(--font-jp);font-weight:500;letter-spacing:.04em;
+  line-height:1.9;
 }
 .pain-closing::before, .pain-closing::after{
   content:"";display:inline-block;width:30px;height:1px;background:var(--terra);vertical-align:middle;margin:0 18px;opacity:.6;
@@ -672,14 +613,14 @@ html{scroll-padding-top:80px}
 .proc-step h4{font-size:1.2rem;margin:0 18px 8px;font-weight:700;letter-spacing:.03em;font-family:var(--font-jp)}
 .proc-step p{margin:0 18px;color:var(--ink);font-size:14.5px;line-height:1.8}
 .proc-step .ico-big{
-  width:100%;height:200px;margin:0 0 20px;
+  width:100%;aspect-ratio:4/3;height:auto;margin:0 0 20px;
   border-radius:var(--r-md) var(--r-md) 0 0;overflow:hidden;
-  background-color:var(--gold);
-  background-size:125%;
+  background-color:#f5f5f0;
+  background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
 }
-.proc-step.ai .ico-big{background-color:var(--gold)}
+.proc-step.ai .ico-big{background-color:#f5f5f0}
 .arr-big{
   width:54px;height:54px;border-radius:50%;
   background:var(--terra);color:#fff;
@@ -731,7 +672,7 @@ html{scroll-padding-top:80px}
 .svc:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,0.14)}
 .svc-header{
   height:88px;
-  background:linear-gradient(135deg,#6aaa64 0%,#4a8a44 100%);
+  background:#3d7a38;
   position:relative;display:flex;align-items:center;justify-content:center;
   padding-top:0;overflow:hidden;
 }
@@ -811,14 +752,14 @@ html{scroll-padding-top:80px}
 
 .price{
   background:#fff;border-radius:20px;padding:32px 28px;
-  border:1px solid rgba(107,158,107,.15);
+  border:1px solid rgba(61,122,56,.15);
   position:relative;
   transition:transform .35s cubic-bezier(.22,.68,0,1.2), box-shadow .35s ease;
-  font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;
+  font-family:"Zen Kaku Gothic New",sans-serif;
 }
 .price:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(60,100,60,.13)}
 .price.feat{
-  background:#6b9e6b;
+  background:#3d7a38;
   color:#fff;border:0;
   box-shadow:0 8px 32px rgba(60,120,60,.25);
 }
@@ -834,16 +775,16 @@ html{scroll-padding-top:80px}
 .price .price-badge.badge-new{background:#e07830}
 .price .price-cat{
   font-size:11px;letter-spacing:.2em;font-weight:500;
-  color:#9ab89a;text-transform:uppercase;margin-bottom:10px;
+  color:var(--ink-faint);text-transform:uppercase;margin-bottom:10px;
 }
 .price.feat .price-cat{color:rgba(255,255,255,.7)}
 .price h3{
   font-size:1.15rem;margin:0 0 4px;font-weight:700;
-  font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;
+  font-family:"Zen Kaku Gothic New",sans-serif;
   color:#2a3a2a;
 }
 .price.feat h3{color:#fff}
-.price .price-sub{font-size:12.5px;color:#8a9e8a;margin-bottom:18px}
+.price .price-sub{font-size:12.5px;color:var(--ink-faint);margin-bottom:18px}
 .price.feat .price-sub{color:rgba(255,255,255,.75)}
 .price .amount{
   font-weight:900;font-size:2rem;letter-spacing:.02em;line-height:1;
@@ -851,28 +792,28 @@ html{scroll-padding-top:80px}
 }
 .price.feat .amount{color:#fff}
 .price .amount small{font-size:.85rem;font-weight:500;margin-left:2px}
-.price .from{font-size:11.5px;color:#9aaa9a;margin-bottom:0}
+.price .from{font-size:11.5px;color:var(--ink-faint);margin-bottom:0}
 .price.feat .from{color:rgba(255,255,255,.7)}
 .price ul{
   list-style:none;margin:20px 0 0;padding:20px 0 0;
-  border-top:1px solid rgba(107,158,107,.15);
+  border-top:1px solid rgba(61,122,56,.15);
 }
 .price.feat ul{border-top-color:rgba(255,255,255,.2)}
 .price li{
   font-size:13px;padding:6px 0 6px 20px;
-  position:relative;line-height:1.65;color:#5a6e5a;
+  position:relative;line-height:1.65;color:var(--ink-soft);
 }
 .price.feat li{color:rgba(255,255,255,.9)}
 .price li::before{
   content:"";position:absolute;left:0;top:13px;
   width:9px;height:5px;
-  border-left:1.5px solid #6b9e6b;border-bottom:1.5px solid #6b9e6b;
+  border-left:1.5px solid #3d7a38;border-bottom:1.5px solid #3d7a38;
   transform:rotate(-45deg);
 }
 .price.feat li::before{border-color:#e8c66a}
 .price-note{
-  margin-top:36px;font-size:12.5px;color:#7a8e7a;line-height:2;
-  font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;
+  margin-top:36px;font-size:12.5px;color:var(--ink-soft);line-height:2;
+  font-family:"Zen Kaku Gothic New",sans-serif;
 }
 
 /* ─────────── pricing categories ─────────── */
@@ -960,7 +901,7 @@ html{scroll-padding-top:80px}
 .print-promise span{color:var(--terra-deep)}
 
 /* visual: bad poster vs good poster */
-.print-art{position:relative;aspect-ratio:1/1;width:100%;max-width:520px;margin:0 auto}
+.print-art{position:relative;width:100%;max-width:520px;margin:0 auto}
 .poster{
   position:absolute;background:#fff;
   box-shadow:var(--shadow-md);
@@ -985,15 +926,15 @@ html{scroll-padding-top:80px}
   padding:0;
 }
 .poster-bad .tile{
-  position:absolute;background:linear-gradient(135deg,#B5D9BD,#8FBF9A);
+  position:absolute;background:linear-gradient(135deg,rgba(61,122,56,.35),#3d7a38);
   box-shadow:0 4px 12px rgba(61,40,30,.15);
   display:grid;place-items:center;color:#fff;
   font-family:var(--font-hand-en);font-size:11px;letter-spacing:.1em;
 }
 .poster-bad .tile.t1{left:0;top:0;width:50%;height:50%}
-.poster-bad .tile.t2{right:0;top:0;width:50%;height:50%;transform:translate(2%,-1%) rotate(.8deg);background:linear-gradient(135deg,#8FBF9A,#5E9A6E)}
-.poster-bad .tile.t3{left:0;bottom:0;width:50%;height:50%;transform:translate(-1%,1.5%) rotate(-.6deg);background:linear-gradient(135deg,#F4E89B,#8FBF9A)}
-.poster-bad .tile.t4{right:0;bottom:0;width:50%;height:50%;transform:translate(1%,2%) rotate(1.2deg);background:linear-gradient(135deg,#5E9A6E,#8FBF9A)}
+.poster-bad .tile.t2{right:0;top:0;width:50%;height:50%;transform:translate(2%,-1%) rotate(.8deg);background:linear-gradient(135deg,#3d7a38,#3d7a38)}
+.poster-bad .tile.t3{left:0;bottom:0;width:50%;height:50%;transform:translate(-1%,1.5%) rotate(-.6deg);background:linear-gradient(135deg,#F4E89B,#3d7a38)}
+.poster-bad .tile.t4{right:0;bottom:0;width:50%;height:50%;transform:translate(1%,2%) rotate(1.2deg);background:linear-gradient(135deg,#3d7a38,#3d7a38)}
 /* tape strips */
 .poster-bad .tape{
   position:absolute;background:rgba(255,235,180,.7);
@@ -1127,29 +1068,6 @@ html{scroll-padding-top:80px}
 .works-foot{margin-top:60px;display:flex;justify-content:center}
 .works-foot .btn-ghost{font-family:var(--font-jp)}
 
-/* ─────────── testimonials ─────────── */
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media (max-width: 920px){ .test-grid{grid-template-columns:1fr} }
-
-.test{
-  background:#fff;border-radius:var(--r-md);padding:32px 30px;
-  border:.5px solid var(--line);
-  position:relative;
-}
-.test .qmark{
-  position:absolute;top:18px;right:24px;
-  font-family:var(--font-jp);font-weight:900;font-size:80px;color:var(--gold-deep);opacity:.7;line-height:.6;
-}
-.test p{margin:0 0 24px;font-size:14.5px;line-height:2;color:var(--ink)}
-.test .who{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--line)}
-.test .ava{
-  width:46px;height:46px;border-radius:50%;
-  background:linear-gradient(135deg,var(--gold),var(--terra-soft));
-  display:grid;place-items:center;color:#fff;font-family:var(--font-jp);font-weight:700;font-size:16px;
-}
-.test .who-info b{display:block;font-size:13px;font-weight:700;letter-spacing:.05em}
-.test .who-info span{font-size:11px;color:var(--ink-soft);font-family:var(--font-mono);letter-spacing:.1em}
-
 /* ─────────── faq ─────────── */
 .faq{max-width:820px;margin:0 auto}
 .faq details{
@@ -1279,7 +1197,7 @@ html{scroll-padding-top:80px}
 
 /* form */
 .form-card{
-  background:#fff;color:var(--ink);
+  background:var(--color-bg-paper);color:var(--ink);
   border-radius:var(--r-md);
   padding:38px 38px;
   box-shadow:0 30px 80px rgba(0,0,0,.18);
@@ -1453,6 +1371,7 @@ html{scroll-padding-top:80px}
   font-family:var(--font-jp);
   font-size:14px;
   color:var(--ink);
+  background:#fff;
   transition:border-color .2s
 }
 .form-group input:focus,.form-group textarea:focus{
@@ -1469,7 +1388,7 @@ html{scroll-padding-top:80px}
   background:rgba(46,213,115,.1);
   border-left:3px solid #2ed573;
   border-radius:4px;
-  color:#27ae60;
+  color:#3d7a38;
   text-align:center
 }
 .success-message p{margin:0;font-size:14px}
@@ -1478,7 +1397,7 @@ html{scroll-padding-top:80px}
 
 /* ─────────── 診断ウィザード ─────────── */
 .wiz-section{
-  background:linear-gradient(160deg,#e4f0e7 0%,#f0f7f2 45%,#f8fdf9 100%);
+  background:linear-gradient(160deg,#EDEDEA 0%,#F5F5F0 45%,#FAFAF9 100%);
   position:relative;overflow:hidden;
 }
 .wiz-section::before{
@@ -1494,14 +1413,14 @@ html{scroll-padding-top:80px}
   pointer-events:none;
 }
 .wiz-header{text-align:center;margin-bottom:48px}
-.wiz-subtitle{color:#2d6030;font-size:16px;margin-top:10px;font-weight:600;letter-spacing:.02em}
+.wiz-subtitle{color:#3d7a38;font-size:16px;margin-top:10px;font-weight:600;letter-spacing:.02em}
 .wiz-card{
   background:#fff;border-radius:24px;
   box-shadow:0 8px 60px rgba(30,60,32,.18),0 2px 16px rgba(30,60,32,.08);
   max-width:680px;margin:0 auto;overflow:hidden;
 }
 .wiz-card-banner{
-  background:linear-gradient(135deg,#1e4a22 0%,#2d5f2a 40%,#3d7a38 72%,#4d9044 100%);
+  background:#3d7a38;
   padding:22px 32px 18px;display:flex;align-items:center;gap:16px;
 }
 .wiz-card-banner-icon{font-size:2.4rem;line-height:1;flex-shrink:0}
@@ -1514,10 +1433,10 @@ html{scroll-padding-top:80px}
   color:#fff;line-height:1.5;
 }
 .wiz-card-body{padding:32px 40px 40px}
-.wiz-progress-wrap{height:8px;background:#d8edd9;border-radius:4px;margin-bottom:12px;overflow:hidden}
+.wiz-progress-wrap{height:8px;background:#e0e0dc;border-radius:4px;margin-bottom:12px;overflow:hidden}
 .wiz-progress-bar{
   height:100%;
-  background:linear-gradient(90deg,#2d5f2a,#3d7a38,#5aab52);
+  background:#3d7a38;
   border-radius:4px;width:0%;transition:width .45s cubic-bezier(.4,0,.2,1);
 }
 .wiz-step-label{
@@ -1528,15 +1447,15 @@ html{scroll-padding-top:80px}
 .wiz-question,.wiz-result{animation:wizFadeIn .38s ease}
 .wiz-question h3{
   font-family:var(--font-jp);font-size:clamp(1.1rem,2.2vw,1.45rem);
-  font-weight:800;color:#1a3a1c;margin:0 0 24px;line-height:1.55;
+  font-weight:800;color:#2a3a2a;margin:0 0 24px;line-height:1.55;
 }
 .wiz-choices{display:flex;flex-direction:column;gap:12px}
 .wiz-choice-btn{
   width:100%;display:flex;align-items:center;gap:14px;
   padding:16px 20px;background:#fff;
-  border:2.5px solid #c2dbc4;border-radius:14px;cursor:pointer;
+  border:2.5px solid rgba(61,122,56,.25);border-radius:14px;cursor:pointer;
   font-family:var(--font-jp);font-size:15px;font-weight:600;
-  color:#1a3a1c;text-align:left;position:relative;
+  color:#2a3a2a;text-align:left;position:relative;
   transition:all .22s cubic-bezier(.4,0,.2,1);
 }
 .wiz-choice-btn::after{
@@ -1545,7 +1464,7 @@ html{scroll-padding-top:80px}
   opacity:0;transform:translateX(-6px);transition:all .22s;
 }
 .wiz-choice-btn:hover{
-  background:#f0f9f1;border-color:#3d7a38;
+  background:#F5F5F0;border-color:#3d7a38;
   transform:translateX(6px);
   box-shadow:0 4px 18px rgba(61,122,56,.18);
 }
@@ -1553,11 +1472,11 @@ html{scroll-padding-top:80px}
 .wiz-choice-emoji{font-size:1.5em;flex-shrink:0}
 .wiz-back-wrap{margin-top:20px}
 .wiz-back-btn{
-  background:none;border:none;color:#5a8f5f;
+  background:none;border:none;color:#3d7a38;
   font-family:var(--font-jp);font-size:13px;cursor:pointer;
   padding:4px 0;text-decoration:underline;text-underline-offset:3px;
 }
-.wiz-back-btn:hover{color:#1a3a1c}
+.wiz-back-btn:hover{color:#2a3a2a}
 .wiz-result-badge{
   display:inline-flex;align-items:center;gap:6px;
   background:linear-gradient(135deg,#2d5f2a,#3d7a38);
@@ -1567,7 +1486,7 @@ html{scroll-padding-top:80px}
 }
 .wiz-result-title{
   font-family:var(--font-jp);font-size:clamp(1.3rem,2.5vw,1.7rem);
-  font-weight:800;color:#1a3a1c;margin:0 0 6px;
+  font-weight:800;color:#2a3a2a;margin:0 0 6px;
 }
 .wiz-result-price{
   font-family:var(--font-mono);font-size:1rem;color:#3d7a38;
@@ -1575,14 +1494,14 @@ html{scroll-padding-top:80px}
 }
 .wiz-result-desc{
   font-family:var(--font-jp);font-size:15px;line-height:1.85;
-  color:#2a4a2c;margin:0 0 20px;padding:16px 18px;
-  background:#f0f9f1;border-radius:10px;border-left:4px solid #3d7a38;
+  color:#2a3a2a;margin:0 0 20px;padding:16px 18px;
+  background:#F5F5F0;border-radius:10px;border-left:4px solid #3d7a38;
 }
 .wiz-checklist{list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:8px}
 .wiz-checklist li{
   display:flex;align-items:flex-start;gap:10px;
-  font-family:var(--font-jp);font-size:14px;color:#2a4a2c;line-height:1.5;
-  padding:9px 14px;background:#f8fdf8;border-radius:8px;
+  font-family:var(--font-jp);font-size:14px;color:#2a3a2a;line-height:1.5;
+  padding:9px 14px;background:#FAFAF8;border-radius:8px;
 }
 .wiz-checklist li::before{
   content:"✓";width:20px;height:20px;
@@ -1603,11 +1522,11 @@ html{scroll-padding-top:80px}
 .wiz-line-btn:hover{background:linear-gradient(135deg,#05b34b,#049e41);transform:translateY(-2px);box-shadow:0 8px 30px rgba(6,199,85,.48)}
 .wiz-retry-btn{
   width:100%;padding:14px;background:none;
-  border:2px solid #c2dbc4;border-radius:14px;
-  font-family:var(--font-jp);font-size:14px;color:#4a7a50;
+  border:2px solid rgba(61,122,56,.25);border-radius:14px;
+  font-family:var(--font-jp);font-size:14px;color:#3d7a38;
   cursor:pointer;transition:all .22s;
 }
-.wiz-retry-btn:hover{border-color:#3d7a38;color:#1a3a1c;background:#f0f9f1}
+.wiz-retry-btn:hover{border-color:#3d7a38;color:#2a3a2a;background:#F5F5F0}
 .wiz-nav-link{color:#3d7a38 !important;font-weight:700 !important}
 @media(max-width:640px){
   .wiz-card-body{padding:20px 16px 24px}
@@ -1704,8 +1623,12 @@ html{scroll-padding-top:80px}
     padding: 0 18px;
   }
   .h-display {
-    font-size: clamp(1.5rem, 6.5vw, 2rem);
+    font-size: 1.5rem;
     line-height: 1.5;
+    letter-spacing: .03em;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-break: strict;
   }
   .lede {
     font-size: 14px;
@@ -1717,7 +1640,7 @@ html{scroll-padding-top:80px}
     gap: 16px;
   }
   .eyebrow {
-    font-size: 13px;
+    font-size: 1.25rem;
   }
   /* ④ Pricing */
   .price {
@@ -1763,8 +1686,34 @@ html{scroll-padding-top:80px}
   }
 }
 
-/* ── 480px 以下（① Nav ② hero-art復元 ⑥ Works/Voices/FAQ） ── */
+/* ── 480px 以下（① Nav ② hero-art復元 ⑥ Works/FAQ） ── */
 @media (max-width: 480px) {
+  /* ⓪ 見出し折返し */
+  .h-display {
+    font-size: 1.25rem;
+    line-height: 1.55;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-break: strict;
+  }
+  .hero h1,
+  .hero__title {
+    font-size: 1.25rem;
+    line-height: 1.55;
+    letter-spacing: 0.02em;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-break: strict;
+  }
+  .hero__subtitle,
+  [class*="__subtitle"],
+  [class*="__description"] {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-break: strict;
+  }
   /* ① Nav */
   .site-nav {
     padding: 0 8px;
@@ -1797,19 +1746,6 @@ html{scroll-padding-top:80px}
   .work-body .tags {
     font-size: 12.5px;
   }
-  /* ⑥ Voices */
-  .test {
-    padding: 24px 20px;
-  }
-  .test p {
-    font-size: 13.5px;
-    line-height: 1.9;
-  }
-  .test .qmark {
-    font-size: 60px;
-    top: 12px;
-    right: 16px;
-  }
   /* ⑥ FAQ */
   .faq summary {
     font-size: 0.95rem;
@@ -1828,15 +1764,6 @@ html{scroll-padding-top:80px}
   }
 }
 
-/* ── Phase 3: voices hover ── */
-.test{
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.test:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 32px rgba(0,0,0,.06);
-}
-
 /* ── Phase 3: works image zoom ── */
 .work-img img{
   transition:transform .4s ease;
@@ -1852,7 +1779,7 @@ html{scroll-padding-top:80px}
   right:-10px;top:50%;
   transform:translateY(-50%);
   font-size:120px;
-  font-family:'Noto Serif JP',serif;
+  font-family:'Zen Kaku Gothic New',sans-serif;
   font-weight:700;
   color:var(--ink);
   opacity:.04;
@@ -1865,12 +1792,673 @@ html{scroll-padding-top:80px}
 
 /* ── Phase 3: mobile adjustments ── */
 @media(max-width:768px){
-  .hero-content h1{font-size:26px;line-height:1.55}
-  .site-nav.scrolled{padding:0 16px}
+.site-nav.scrolled{padding:0 16px}
   .pain-bg-num{font-size:80px}
-  .svc:hover,.price:hover,.work:hover,.test:hover{
+  .svc:hover,.price:hover,.work:hover{
     transform:none;box-shadow:none;
   }
+}
+
+/* ═══════════════════════════════════════
+   おすすめプランガイド（#pricing 上部）
+   ═══════════════════════════════════════ */
+.pricing-guide {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.pricing-guide-label {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+  font-family: var(--font-mono);
+}
+.pricing-guide-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.pricing-guide-card {
+  background: var(--cream);
+  border-radius: 18px;
+  padding: 32px 24px;
+  text-align: left;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+.pgc-popular {
+  border-color: #3d7a38;
+  border-width: 2px;
+  background: #fff;
+}
+.pgc-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3d7a38;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+.pgc-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.pgc-price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #3d7a38;
+  margin: 0 0 12px;
+  font-family: var(--font-mono);
+}
+.pgc-desc {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin: 0;
+}
+.pricing-guide-note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 40px;
+}
+
+
+/* ─── お問い合わせ 信頼リスト ─── */
+.cta-trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cta-trust-item {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.03em;
+  font-weight: 500;
+}
+
+/* ─── 料金 CTA 補足文 ─── */
+.pricing-cta-note {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 0;
+  letter-spacing: 0.03em;
+  line-height: 1.8;
+}
+
+/* ─── Works 注意書きボックス ─── */
+.works-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f5f5f0;
+  border-left: 3px solid #3d7a38;
+  border-radius: 6px;
+  padding: 14px 18px;
+  max-width: 640px;
+  margin: 24px auto 48px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+.works-notice-icon {
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .pricing-guide-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════
+   スクロールアニメーション（厳選3種）
+   ═══════════════════════════════════════ */
+
+/* ── A. セクション見出し：右からスライドイン ── */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.reveal-right.in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── B. カード類：スケールアップ ── */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.reveal-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── 連鎖表示用ディレイ ── */
+.delay-1 { transition-delay: .12s; }
+.delay-2 { transition-delay: .24s; }
+.delay-3 { transition-delay: .36s; }
+
+/* ── C. ヒーロー初回ロードアニメーション ── */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeScale {
+  from { opacity: 0; transform: scale(1.05); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.hero__title    { animation: heroSlideUp .9s cubic-bezier(.2,.7,.2,1) .2s both; }
+.hero__subtitle { animation: heroSlideUp .9s cubic-bezier(.2,.7,.2,1) .4s both; }
+.hero__price    { animation: heroSlideUp .9s cubic-bezier(.2,.7,.2,1) .5s both; }
+.hero__cta      { animation: heroSlideUp .9s cubic-bezier(.2,.7,.2,1) .65s both; }
+.hero__note     { animation: heroSlideUp .9s cubic-bezier(.2,.7,.2,1) .8s both; }
+
+/* ── アクセシビリティ：動きを減らす設定 ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-right, .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero__title, .hero__subtitle, .hero__price, .hero__cta, .hero__note {
+    animation: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════
+   Topics（お知らせ）セクション
+   ═══════════════════════════════════════ */
+.topics-section {
+  padding: 80px 0 60px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.topics-header {
+  margin-bottom: 32px;
+}
+.topics-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topics-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  transition: background .2s ease;
+}
+.topics-item:first-child {
+  border-top: 1px solid var(--line);
+}
+.topics-item:hover {
+  background: var(--cream);
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  border-radius: 8px;
+}
+.topics-date {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: .1em;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  min-width: 100px;
+}
+.topics-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-jp);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 3px 12px;
+  border-radius: 50px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.topics-badge--info {
+  background: rgba(61,122,56,.12);
+  color: #3d7a38;
+}
+.topics-badge--work {
+  background: rgba(217,199,102,.25);
+  color: var(--gold-deep);
+}
+.topics-badge--campaign {
+  background: rgba(61,122,56,.15);
+  color: #2d5f2a;
+  border: 1px solid rgba(61,122,56,.3);
+}
+.topics-title {
+  font-family: var(--font-jp);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: .02em;
+  line-height: 1.7;
+}
+a.topics-item {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a.topics-item:hover .topics-title {
+  color: #3d7a38;
+}
+@media (max-width: 600px) {
+  .topics-section {
+    padding: 60px 0 40px;
+  }
+  .topics-item {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 16px 0;
+  }
+  .topics-date {
+    font-size: 12px;
+    min-width: auto;
+  }
+  .topics-title {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   editorial override — ハードコード色を新パレットに統一
+   ══════════════════════════════════════════════════════════ */
+
+/* ─ ボタン ─ */
+.btn{background:var(--terra)}
+.btn:hover{background:var(--terra-deep)}
+.cta-primary{background:var(--terra)}
+.cta-primary:hover{background:var(--terra-deep)}
+.cta-outline{color:var(--terra);border-color:var(--terra)}
+.cta-outline:hover{background:rgba(74,107,71,.08)}
+
+/* ─ フローティングCTA ─ */
+.floating-cta{background:var(--terra)}
+.floating-cta:hover{background:var(--terra-deep)}
+
+/* ─ CTA hero ─ */
+.hero__cta{background:#C97B5C}
+.hero__cta:hover{background:#B56A4D}
+
+/* ─ サービスカードヘッダー ─ */
+.svc-header{background:var(--terra)}
+
+/* ─ 料金カード ─ */
+.price.feat{background:var(--terra)}
+.price .price-badge{background:var(--terra)}
+.price-cat-title{color:var(--terra)}
+.price-cat-header{border-left-color:var(--terra)}
+.price li::before{border-color:var(--terra)}
+
+/* ─ ガイドカード ─ */
+.pgc-popular{border-color:var(--terra)}
+.pgc-badge{color:var(--terra)}
+.pgc-price{color:var(--terra)}
+
+/* ─ Works notice / Topics ─ */
+.works-notice{border-left-color:var(--terra);background:var(--cream)}
+.topics-badge--info{color:var(--terra);background:rgba(74,107,71,.12)}
+.topics-badge--campaign{color:var(--terra-deep);border-color:rgba(74,107,71,.3)}
+a.topics-item:hover .topics-title{color:var(--terra)}
+
+/* ─ contact section eyebrow（白背景上）─ */
+.contact-section .eyebrow{color:rgba(255,255,255,.9)}
+.contact-section .eyebrow .dot{background:var(--gold);box-shadow:0 0 0 4px rgba(244,213,141,.25)}
+
+/* ─ nav ─ */
+.site-nav.scrolled a:hover{color:var(--terra-deep)}
+.site-nav.scrolled a.nav-active{color:var(--terra-deep)}
+.site-nav:not(.scrolled) a:hover{color:var(--terra-deep)}
+
+/* ─ 強み（strength）カード ─ */
+.strength::before{background:linear-gradient(90deg,var(--terra),var(--gold))}
+
+/* ══════════════════════════════════════════════════════════
+   Phase 2 — カード脱均質化 / セクション背景交互 / マーカー強化
+   ══════════════════════════════════════════════════════════ */
+
+/* ─ A. Servicesカード（.svc）脱均質化 ─ */
+.svc {
+  background: var(--color-bg-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(44,38,32,.06);
+}
+.svc-header {
+  border-radius: 6px 6px 0 0;
+  height: 76px;
+}
+/* 奇数・偶数カードに微妙な傾きで手仕事感を */
+.svc-grid .svc:nth-child(odd)  { transform: rotate(-0.4deg); }
+.svc-grid .svc:nth-child(even) { transform: rotate(0.25deg); }
+.svc:hover {
+  transform: rotate(0deg) translateY(-5px) !important;
+  box-shadow: 0 14px 36px rgba(74,107,71,.14) !important;
+  border-color: var(--terra);
+}
+.svc:hover .ico { transform: rotate(-6deg) scale(1.05); }
+
+/* ─ B. Pricingカード通常版 ─ */
+.price {
+  background: var(--color-bg-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+.price:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(44,38,32,.10);
+}
+
+/* ─ B2. 人気プランカード（.price.feat）→ テラコッタ枠に変更 ─ */
+.price.feat {
+  background: #FEFEFE;
+  border: 2px solid var(--color-accent-terracotta) !important;
+  color: var(--ink);
+  transform: scale(1.04);
+  box-shadow: 0 16px 40px rgba(201,123,92,.18);
+}
+.price.feat::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border: 1px dashed var(--color-accent-terracotta);
+  border-radius: 12px;
+  z-index: -1;
+  pointer-events: none;
+}
+.price.feat:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 22px 52px rgba(201,123,92,.25);
+}
+/* featured cardが明色背景になったためテキスト色をリセット */
+.price.feat h3              { color: var(--ink)       !important; }
+.price.feat .amount         { color: var(--ink)       !important; }
+.price.feat .price-cat      { color: var(--ink-faint) !important; }
+.price.feat .price-sub      { color: var(--ink-faint) !important; }
+.price.feat .from           { color: var(--ink-faint) !important; }
+.price.feat ul              { border-top-color: var(--color-border) !important; }
+.price.feat li              { color: var(--ink-soft)  !important; }
+.price.feat li::before      { border-color: var(--terra) !important; }
+.price.feat .price-badge    { background: var(--color-accent-terracotta) !important; }
+
+/* ─ C. セクション背景の交互色付け ─ */
+#pain      { background: var(--color-bg-paper) !important; }
+#services  { background: var(--color-bg-base)  !important; }
+#strengths { background: var(--color-bg-paper) !important; }
+#pricing   { background: var(--color-bg-base)  !important; }
+#works     { background: var(--color-bg-paper) !important; }
+#flow      { background: var(--color-bg-base)  !important; }
+#faq       { background: var(--color-bg-base)  !important; }
+/* print: グラデーション背景を新パレットで更新 */
+#print     {
+  background:
+    radial-gradient(ellipse 70% 60% at 90% 10%, rgba(201,123,92,.18), transparent 60%),
+    var(--color-bg-paper) !important;
+}
+#about     { background: var(--color-bg-base)  !important; }
+
+/* ─ D. マーカーアンダーライン強化（手書き風に） ─ */
+.h-display em::after {
+  height: .3em;
+  opacity: .55;
+  border-radius: 2px;
+  transform: rotate(-0.5deg) skewX(-3deg);
+  transform-origin: left;
+}
+
+/* ─ E. Pricingガイドカード（上部3枚サマリー）調整 ─ */
+.pricing-guide-cards {
+  align-items: center;
+}
+.pricing-guide-card {
+  background: var(--color-bg-paper);
+  border-radius: 8px;
+  border-color: var(--color-border);
+}
+.pgc-popular {
+  background: #FEFEFE;
+  border: 2px solid var(--color-accent-terracotta);
+  transform: scale(1.06);
+  box-shadow: 0 12px 32px rgba(44,38,32,.18), 0 4px 12px rgba(201,123,92,.15);
+  z-index: 2;
+  position: relative;
+}
+.pgc-popular:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 18px 48px rgba(44,38,32,.22), 0 6px 16px rgba(201,123,92,.2);
+}
+.pgc-badge { color: var(--color-accent-terracotta); }
+.pgc-price { color: var(--color-accent-terracotta); }
+.pgc-popular .pgc-badge:first-child {
+  font-size: 0.95rem;
+  padding: 0.4rem 1.2rem;
+  background: var(--color-accent-terracotta);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+@media (max-width: 768px) {
+  .pgc-popular {
+    transform: scale(1);
+  }
+  .pgc-popular:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   Phase 3 — 装飾仕上げ（テクスチャ / masking tape / レイアウト抑揚）
+   ══════════════════════════════════════════════════════════ */
+
+/* ─ A. 紙テクスチャ（body背景に薄いノイズ） ─ */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ─ B. Worksカード マスキングテープ装飾 ─ */
+.work {
+  overflow: visible; /* テープがカード上端に飛び出せるよう */
+}
+.work::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 22%;
+  width: 56px;
+  height: 20px;
+  background: rgba(201,123,92,.28);
+  transform: rotate(-3deg);
+  z-index: 2;
+  border-radius: 2px;
+}
+.work:nth-child(3n+2)::before {
+  background: rgba(58,90,124,.25);
+  left: 66%;
+  transform: rotate(4deg);
+}
+.work:nth-child(3n)::before {
+  background: rgba(244,213,141,.5);
+  left: 40%;
+  transform: rotate(-2deg);
+}
+
+/* ─ C. Worriesカード 階段状配置（PCのみ） ─ */
+@media (min-width: 921px) {
+  .pain-grid {
+    align-items: start;
+  }
+  .pain-grid > *:nth-child(2),
+  .pain-grid > *:nth-child(4) {
+    margin-top: 2.5rem;
+  }
+}
+
+/* ─ D. Strengthsプロセス ずらし配置（PCのみ） ─ */
+@media (min-width: 721px) {
+  .process {
+    align-items: start;
+  }
+  .process .arr-big {
+    align-self: center;
+    margin-top: 2rem;
+  }
+  .process .proc-step:last-of-type {
+    margin-top: 3.5rem;
+  }
+  .process .proc-step:nth-child(1) { transform: rotate(-0.4deg); }
+  .process .proc-step:nth-child(3) { transform: rotate(0.4deg); }
+}
+@media (max-width: 720px) {
+  .process .proc-step:nth-child(1),
+  .process .proc-step:nth-child(3) { transform: none; }
+}
+
+/* ─ E. Works写真カードに紙背景を追加（既存transparentからの変更） ─ */
+.work {
+  background: var(--color-bg-paper);
+  border-radius: 4px;
+}
+.work-body {
+  padding: 18px 10px 4px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Phase 4 — 統一感調整（Contact / FAQ / About）
+   ══════════════════════════════════════════════════════════ */
+
+/* ─ A. FAQ 開閉強調・ホバー ─ */
+.faq details {
+  border-left: 3px solid transparent;
+  transition: border-color .2s ease, background .2s ease, box-shadow .3s;
+}
+.faq details[open] {
+  border-left-color: var(--color-accent-terracotta);
+  background: var(--color-bg-paper);
+}
+.faq summary:hover {
+  background: rgba(244,236,222,.55);
+}
+
+/* ─ B. About — キャプション分離 ─ */
+.about__visual {
+  display: flex;
+  flex-direction: column;
+}
+.about__caption-en {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  color: var(--color-accent-terracotta);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  letter-spacing: 0.05em;
+}
+.about__caption-area {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+/* ─ F. Works見出し — マーカー＋サブタイトル分離 ─ */
+.marker {
+  font-style: normal;
+  color: var(--terra);
+  position: relative;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+.marker::after {
+  content: "";
+  position: absolute;
+  left: -4%; right: -4%; bottom: .02em;
+  height: .3em;
+  background: var(--gold);
+  opacity: .55;
+  z-index: -1;
+  border-radius: 2px;
+  transform: rotate(-0.5deg) skewX(-3deg);
+  transform-origin: left;
+}
+/* ─ Hero title marker — 黄色背景マーカー（既存.markerの色変更を打ち消し） ─ */
+.hero__title .marker {
+  color: inherit;
+  background: linear-gradient(
+    transparent 60%,
+    rgba(244,213,141,0.7) 60%,
+    rgba(244,213,141,0.7) 95%,
+    transparent 95%
+  );
+  padding: 0 0.1em;
+  position: static;
+}
+.hero__title .marker::after {
+  display: none;
+}
+
+.works__subtitle-inline {
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  display: inline-block;
+  margin-top: 0.4em;
+  letter-spacing: .04em;
+}
+
+/* ── 漫画画像の黒フチ除去（画像外周の焼き込みフチをクロップ） ── */
+.flow-manga {
+  overflow: hidden;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.flow-manga img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  transform: scale(1.025);
+  transform-origin: center;
+}
+.print-art {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.print-art img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: block;
+  width: 100% !important;
+  transform: scale(1.025);
+  transform-origin: center;
 }
 
 </style>
@@ -1884,11 +2472,13 @@ html{scroll-padding-top:80px}
       "name": "おりなす.Lab",
       "url": "https://tsumugu-design.jp/",
       "image": "https://tsumugu-design.jp/public/images/logo.png",
-      "description": "丁寧なデザインで、伝わる販促物を作成。神戸市北区拠点の夫婦チーム。",
+      "description": "チラシ・SNS・LP・撮影・大判ポスター印刷まで。神戸市北区の夫婦チームが地元のお店の販促をまるごとサポートします。",
       "contactPoint": {
         "@type": "ContactPoint",
+        // TODO: TEL 電話番号確定後に変更（不要なら行ごと削除）
         "telephone": "+81-XX-XXXX-XXXX",
         "contactType": "Customer Service",
+        // TODO: EMAIL メールアドレス確定後に変更
         "email": "info@tsumugu-design.jp"
       },
       "address": {
@@ -1902,13 +2492,14 @@ html{scroll-padding-top:80px}
       "@type": "LocalBusiness",
       "name": "おりなす.Lab",
       "image": "https://tsumugu-design.jp/public/images/team-couple.jpg",
-      "description": "スピード感とビジュアルデザインを組み合わせた夫婦チーム。",
+      "description": "夫婦二人で、お店の声を聴きながら手で仕上げる。地元のお店に顔の見える販促パートナーを提供します。",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "JP",
         "addressRegion": "兵庫県",
         "addressLocality": "神戸市北区"
       },
+      // TODO: TEL 電話番号確定後に変更（不要なら行ごと削除）
       "telephone": "+81-XX-XXXX-XXXX",
       "url": "https://tsumugu-design.jp/",
       "priceRange": "¥",
@@ -1963,6 +2554,7 @@ html{scroll-padding-top:80px}
     <img src="images/logo.png" alt="おりなす.Lab" class="logo-img">
   </a>
   <div class="site-nav-inner">
+    <a href="#topics">お知らせ</a>
     <a href="#services">サービス</a>
     <a href="#flow">制作の流れ</a>
     <a href="#pricing">料金</a>
@@ -1974,54 +2566,96 @@ html{scroll-padding-top:80px}
 
 <!-- ───────── Hero ───────── -->
 <section class="hero" id="top" data-screen-label="01 Hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>神戸北区のお店に、寄り添うデザインを。</h1>
-    <p>チラシ・SNS・LP・撮影・印刷まで。神戸市北区の夫婦チームが、地元のお店の集客をまるごと支えます。</p>
-    <a class="hero-cta" href="#contact">まずは相談してみる</a>
+  <div class="hero__bg">
+    <img src="public/images/hero-bg.png" alt="神戸北区の風景">
+    <div class="hero__overlay"></div>
+  </div>
+
+  <div class="hero__content">
+    <h1 class="hero__title">
+      作って終わり、じゃなく。<br>
+      続けられる<span class="marker">販促</span>を、一緒に。
+    </h1>
+
+    <p class="hero__subtitle">
+      神戸市の小さなお店のとなりで、<br>
+      チラシ・SNS・ホームページまでまるごとお手伝いします。
+    </p>
+
+    <p class="hero__price">
+      ポスター・チラシ・SNSなど、単発 ¥5,000〜 / 月額 ¥30,000〜 から相談できます
+    </p>
+
+    <!-- TODO: LINE LINE公式アカウントURL確定後に href="#contact" をLINEのURLに変更 -->
+    <a href="#contact" class="hero__cta">まずはLINEで話を聞いてみる</a>
+
+    <p class="hero__note">📩 無理な営業はありません。内容が固まっていなくても大丈夫です。</p>
+  </div>
+</section>
+
+<!-- ───────── Topics ───────── -->
+<section class="section topics-section" id="topics" data-screen-label="Topics">
+  <div class="wrap">
+    <div class="topics-header">
+      <span class="eyebrow reveal-pop"><span class="dot"></span><span>Topics</span></span>
+      <h2 class="h-display reveal-right" style="margin-top:16px">お知らせ</h2>
+    </div>
+    <ul class="topics-list">
+      <li class="topics-item reveal">
+        <time class="topics-date" datetime="2026-05-20">2026.05.20</time>
+        <span class="topics-badge topics-badge--info">お知らせ</span>
+        <span class="topics-title">ホームページを公開しました。</span>
+      </li>
+      <!-- ▼ 新しい記事を追加するときは、以下をコピーして上に貼り付け ▼
+      <li class="topics-item reveal">
+        <time class="topics-date" datetime="2026-XX-XX">2026.XX.XX</time>
+        <span class="topics-badge topics-badge--work">実績</span>
+        <span class="topics-title">ここにタイトルを入れる</span>
+      </li>
+      -->
+    </ul>
   </div>
 </section>
 
 <!-- ───────── Pain points ───────── -->
-<section class="section section-cream" id="pain" data-screen-label="02 Pain Points" style="background:#f0f5f0">
+<section class="section section-cream" id="pain" data-screen-label="02 Pain Points" style="background:#F5F5F0">
   <div class="wrap">
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Worries</span></span>
-        <h2 class="h-display" style="margin-top:18px">こんなお悩み、<br/><em>ありませんか？</em></h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">こんなお悩み、<br><em>ありませんか？</em></h2>
       </div>
-      <p class="lede">毎日の発信、商品の魅力づけ、販促ツールの整備──<br/>小さく見えて、後回しにしがちな「販促のもやもや」。<br/>ひとつずつ、一緒に解いていきましょう。</p>
+      <p class="lede">毎日の発信、商品の魅力づけ、販促ツールの整備──<br/>小さく見えて、後回しにしがちな「販促のもやもや」。</p>
     </div>
 
     <div class="pain-grid">
-      <article class="pain pain-img reveal" style="background-image:url('images/01.jpg')">
+      <article class="pain pain-img reveal-scale" style="background-image:url('public/images/01.jpg')" aria-label="SNS投稿の画像作りで時間が消えていくイメージ">
         <span class="pain-bg-num" aria-hidden="true">01</span>
         <span class="num">№ 01</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <p>チラシやSNS画像を作るのに、毎回時間がかかってしまう。</p>
+        <p>毎週日曜、SNS投稿の画像作りで半日が消えていく</p>
       </article>
-      <article class="pain pain-img reveal d2" style="background-image:url('images/02.jpg')">
+      <article class="pain pain-img reveal-scale delay-1" style="background-image:url('public/images/02.jpg')" aria-label="スマホ撮りのメニュー写真に悩むイメージ">
         <span class="pain-bg-num" aria-hidden="true">02</span>
         <span class="num">№ 02</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r=".5" fill="currentColor"/><circle cx="13" cy="10" r=".5" fill="currentColor"/></svg></div>
-        <p>お店や商品の魅力が、なかなかうまく伝わらない。</p>
+        <p>メニュー写真がスマホ撮りで、なんとなく安っぽく見える気がする</p>
       </article>
-      <article class="pain pain-img reveal d3" style="background-image:url('images/03.jpg')">
+      <article class="pain pain-img reveal-scale delay-2" style="background-image:url('public/images/03.jpg')" aria-label="デザイン会社の敷居が高いと感じるイメージ">
         <span class="pain-bg-num" aria-hidden="true">03</span>
         <span class="num">№ 03</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <p>デザイン会社に頼むと、予算的に少し厳しい。</p>
+        <p>デザイン会社は敷居が高そう。でも自分で作るのは限界</p>
       </article>
-      <article class="pain pain-img reveal d4" style="background-image:url('images/04.jpg')">
+      <article class="pain pain-img reveal-scale delay-3" style="background-image:url('public/images/04.jpg')" aria-label="AI活用に迷うイメージ">
         <span class="pain-bg-num" aria-hidden="true">04</span>
         <span class="num">№ 04</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="14" rx="2"/><circle cx="9" cy="13" r="1.2"/><circle cx="15" cy="13" r="1.2"/><path d="M12 2v4M9 20v2M15 20v2"/></svg></div>
-        <p>AIを業務に活かしたいけれど、何から始めればいいかわからない。</p>
+        <p>AIで楽になるって聞くけど、何から触ればいいか分からない</p>
       </article>
     </div>
 
-    <p class="pain-closing reveal">そんな方に、優しく寄り添いながらサポートさせていただきます。</p>
+    <p class="pain-closing reveal">わかります。私たちも、最初の一歩は同じでした。<br>ひとつずつ、一緒にほどいていきましょう。</p>
   </div>
 </section>
 
@@ -2030,7 +2664,7 @@ html{scroll-padding-top:80px}
   <div class="wrap">
     <div class="wiz-header">
       <span class="eyebrow"><span class="dot"></span><span>Diagnosis</span></span>
-      <h2 class="h-display" style="margin-top:16px">あなたに<em>ぴったり</em>のプランを。</h2>
+      <h2 class="h-display reveal-right" style="margin-top:16px">あなたにぴったりのプランを。</h2>
       <p class="wiz-subtitle">3〜4問に答えるだけで、最適なサービスをご提案します。</p>
     </div>
     <div class="wiz-card">
@@ -2062,83 +2696,105 @@ html{scroll-padding-top:80px}
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Services</span></span>
-        <h2 class="h-display" style="margin-top:18px">まるごとお任せ、<br/><span style="white-space:nowrap"><em>ワンストップ</em>のサービス。</span></h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">まるごとお任せ、<br><em>ワンストップ</em>のサービス。</h2>
       </div>
       <p class="lede">紙ものから、Web、撮影、業務効率化まで。<br/>"伝わる"を作るためのものを、ひとつの窓口で。</p>
     </div>
 
     <div class="svc-grid">
-      <article class="svc reveal">
+      <article class="svc reveal-scale">
         <div class="svc-header">
           <span class="tag">01 / Print</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
         </div>
         <div class="svc-body">
-          <h3>ポスター・チラシ制作</h3>
-          <p>集客に効く、伝わるデザインを。手にとって、思わず読みたくなる紙面づくりを。</p>
+          <h3>思わず手に取りたくなるチラシ・ポスター</h3>
+          <p>お客様が"行ってみたい"と感じる、目を引く1枚を。手にとって、思わず読みたくなる紙面づくりを。</p>
           <span class="more" id="cta-poster" role="button" tabindex="0" style="cursor:pointer">見積もり・納期の相談 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </article>
 
-      <article class="svc reveal d2">
+      <article class="svc reveal-scale delay-1">
         <div class="svc-header">
           <span class="tag">02 / Social</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
         </div>
         <div class="svc-body">
-          <h3>SNS運用素材制作</h3>
-          <p>日々の投稿を魅力的に。続けやすいテンプレートと、目を引くキービジュアルを。</p>
+          <h3>続けやすいSNS投稿の"型"づくり</h3>
+          <p>毎日の投稿が楽になるテンプレートと、目を引く投稿画像を。</p>
           <span class="more" id="cta-sns" role="button" tabindex="0" style="cursor:pointer">テンプレ運用も対応 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </article>
 
-      <article class="svc reveal d3">
+      <article class="svc reveal-scale delay-2">
         <div class="svc-header">
           <span class="tag">03 / Web</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
         </div>
         <div class="svc-body">
-          <h3>LP制作</h3>
-          <p>成果につながるランディングページ。読み終わった頃には、自然と問い合わせたくなる導線を。</p>
+          <h3>1ページで伝わるホームページ（LP）制作</h3>
+          <p>お客様が"予約したい"と感じるまでの流れを設計します。読み終わった頃には、自然と問い合わせたくなる導線を。</p>
           <a class="more" href="/lp-flow.html" target="_blank" rel="noopener noreferrer" style="text-decoration:none">設計から構築まで <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
-      <article class="svc reveal">
+      <article class="svc reveal-scale">
         <div class="svc-header">
           <span class="tag">04 / Brand</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></div>
         </div>
         <div class="svc-body">
-          <h3>ブランディング支援</h3>
-          <p>ロゴ・名刺・会社案内など。お店や会社の"らしさ"を一貫した世界観で整えます。</p>
+          <h3>お店の"らしさ"を整える（ロゴ・名刺）</h3>
+          <p>ロゴ・名刺・会社案内など。お店の雰囲気が、ロゴからチラシまで揃っている状態を作ります。</p>
           <span class="more" id="cta-branding" role="button" tabindex="0" style="cursor:pointer">ロゴ・名刺・案内書 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </article>
 
-      <article class="svc reveal d2">
+      <article class="svc reveal-scale delay-1">
         <div class="svc-header">
           <span class="tag">05 / Photo</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
         </div>
         <div class="svc-body">
-          <h3>メニュー・商品撮影</h3>
-          <p>プロ品質の撮影で商品の魅力を最大化。思わず手に取りたくなる一枚を、デザインと一緒に。</p>
+          <h3>思わず食べたくなるメニュー写真</h3>
+          <p>スマホでは出せない"美味しそう"を、1枚に。デザインと一緒に、商品の魅力を最大化します。</p>
           <span class="more" id="cta-photo" role="button" tabindex="0" style="cursor:pointer">店舗撮影対応 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </article>
 
-      <article class="svc reveal d3">
+      <article class="svc reveal-scale delay-2">
         <div class="svc-header">
           <span class="tag">06 / AI</span>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         </div>
         <div class="svc-body">
-          <h3>業務効率化サポート</h3>
-          <p>ChatGPT・動画編集AIなど、すぐ使えるAIツールの活用法を一緒に学びながら業務を楽にします。小さく試して、続けられる形を作ります。</p>
+          <h3>AI活用の伴走サポート（はじめてOK）</h3>
+          <p>ChatGPT・動画編集AIなど、すぐ使えるAIツールを、小さく試して、お店の作業を楽にしていく方法を一緒に学びます。</p>
           <span class="more" id="cta-ai" role="button" tabindex="0" style="cursor:pointer">まずは相談してみる <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </article>
+
+      <article class="svc reveal-scale delay-3">
+        <div class="svc-header">
+          <span class="tag">Printing</span>
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"/>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+              <rect x="6" y="14" width="12" height="8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="svc-body">
+          <h3>大判ポスター印刷</h3>
+          <p>A4を貼り合わせた手作りポスターを、A1・B1サイズで綺麗に1枚印刷。店頭告知・イベントポスターも1枚からすぐ対応します。</p>
+          <a class="more" href="#print">
+            1枚〜 / 最短翌日対応
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
     </div>
     <div class="section-cta-block reveal">
       <a href="#contact" class="cta-primary">まずは相談してみる</a>
@@ -2153,28 +2809,32 @@ html{scroll-padding-top:80px}
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Our Strengths</span></span>
-        <h2 class="h-display" style="margin-top:18px">高品質を、<br/><em>圧倒的な納期</em>と<br/>低コストでご提供。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">お店のとなりで、<br><em>いっしょに作っていく。</em></h2>
       </div>
-      <p class="lede">「近くにいる」から、相談しやすい。<br/>神戸北区を拠点に、地元のお店の集客をまるごと支えます。<br/>早い・丁寧・顔が見える。それが私たちの約束です。</p>
+      <p class="lede">お店の声を聴いて、ひとつずつ手で仕上げる。<br/>神戸北区から、小さなお店にも頼みやすい制作体制をつくりました。<br/>近くにいるから相談しやすく、顔が見えるから安心して任せられます。</p>
     </div>
 
     <!-- process -->
     <div class="process reveal">
       <div class="proc-step ai">
-        <div class="ico-big" style="background-image:url('images/step_01.jpg')"></div>
+        <div class="ico-big" style="background-image:url('public/images/step_01_new.jpg')"></div>
         <span class="badge">STEP 01</span>
-        <h4>素早くラフ案を生成</h4>
-        <p>方向性・文章・ラフを<br/>スピーディーにご提案。</p>
+        <h4>まずはたたき台を、その日のうちに</h4>
+        <p>夫婦二人で動いているので、意思決定も連絡も早いです。<br/>まず形を見てもらった方が早いので、スピーディーにご提案します。</p>
       </div>
       <div class="arr-big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       <div class="proc-step">
-        <div class="ico-big" style="background-image:url('images/step_02.jpg')"></div>
+        <div class="ico-big" style="background-image:url('public/images/step_02_new.jpg')"></div>
         <span class="badge">STEP 02</span>
-        <h4>デザイナーが丁寧に仕上げ</h4>
-        <p>細部の温度、文字組み、写真の<br/>ひと押しを人の手で。</p>
+        <h4>そこから、お店の声を聴きながら仕上げます</h4>
+        <p>お店の温度感、文字の細部、写真のひと押しは、<br/>直接話を聴いて、人の手でしか出せないので。</p>
       </div>
     </div>
 
+    <div class="reveal" style="margin:40px 0 48px">
+      <img src="public/images/works-desk.png" alt="デザイン制作の様子"
+           style="width:100%;border-radius:8px;object-fit:cover;">
+    </div>
     <div class="strengths-grid">
       <article class="strength reveal">
         <span class="num">01</span>
@@ -2185,8 +2845,8 @@ html{scroll-padding-top:80px}
       <article class="strength reveal d2">
         <span class="num">02</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3>原稿作成サポート</h3>
-        <p>文章が苦手な方も安心。キャッチコピーから本文まで一緒に作ります。</p>
+        <h3>文章が苦手でも、一緒に言葉を考えます</h3>
+        <p>キャッチコピーから本文まで、一緒に作っていきます。</p>
       </article>
       <article class="strength reveal d3">
         <span class="num">03</span>
@@ -2197,22 +2857,53 @@ html{scroll-padding-top:80px}
       <article class="strength reveal d4">
         <span class="num">04</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-        <h3>丸投げ相談OK</h3>
-        <p>何から始めればいいか分からなくても大丈夫。まるごとお任せいただけます。</p>
+        <h3>"何から話せばいいかわからない"でも大丈夫</h3>
+        <p>何から始めればいいか分からなくても、まるごとお任せいただけます。</p>
       </article>
     </div>
   </div>
 </section>
 
 <!-- ───────── Pricing ───────── -->
-<section class="section" id="pricing" data-screen-label="06 Pricing" style="background:#f0f5f0">
+<section class="section" id="pricing" data-screen-label="06 Pricing" style="background:#F5F5F0">
   <div class="wrap">
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Pricing</span></span>
-        <h2 class="h-display" style="margin-top:18px">料金の<em style="color:#6b9e6b">目安</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">料金の<em style="color:#3d7a38">目安</em>。</h2>
       </div>
       <p class="lede">"小さく始めて、続けられる"を大切に。<br/>はじめての方は、まずお気軽にご相談ください。</p>
+    </div>
+
+    <!-- ── おすすめプランガイド ── -->
+    <div class="pricing-guide reveal">
+      <p class="pricing-guide-label">まずどれを選べばいいか迷ったら</p>
+      <div class="pricing-guide-cards">
+
+        <div class="pricing-guide-card reveal-scale">
+          <span class="pgc-badge">まず1点だけ頼んでみたい方へ</span>
+          <p class="pgc-name">お試しプラン</p>
+          <p class="pgc-price">¥5,000〜</p>
+          <p class="pgc-desc">ポスター・SNS画像など、気軽に1点だけ頼んでみたい方に。「これって頼めますか？」から大歓迎です。</p>
+        </div>
+
+        <div class="pricing-guide-card pgc-popular reveal-scale delay-1">
+          <span class="pgc-badge">いちばん人気</span>
+          <span class="pgc-badge">毎月の販促を、ひとつの窓口でまとめたい方へ</span>
+          <p class="pgc-name">まるごとお任せプラン</p>
+          <p class="pgc-price">¥30,000〜¥80,000</p>
+          <p class="pgc-desc">チラシ・SNS素材・撮影など複数まとめて依頼したい方に。窓口ひとつで全部お任せいただけます。</p>
+        </div>
+
+        <div class="pricing-guide-card reveal-scale delay-2">
+          <span class="pgc-badge">ロゴからLPまで、お店の見せ方を根本から整えたい方へ</span>
+          <p class="pgc-name">お店づくりプラン</p>
+          <p class="pgc-price">¥70,000〜</p>
+          <p class="pgc-desc">LP制作・ロゴ・ブランド整備などお店の見せ方を根本から整えたい方に。継続運用サポートも対応可能です。</p>
+        </div>
+
+      </div>
+      <p class="pricing-guide-note">↓ 詳細な料金はこちらからご確認ください</p>
     </div>
 
     <!-- ── カテゴリ① はじめての方におすすめ ── -->
@@ -2242,6 +2933,23 @@ html{scroll-padding-top:80px}
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </article>
+
+        <!-- 01b 大判ポスター印刷 -->
+        <div class="price reveal-scale delay-2">
+          <div class="price-cat">Printing</div>
+          <h3>大判ポスター印刷</h3>
+          <p class="price-sub">A1・B1・A0 / 店頭・イベント用に</p>
+          <div class="amount">¥1,500<small>〜 / 枚</small></div>
+          <p class="from">サイズ・枚数により変動</p>
+          <ul>
+            <li>A1 / B1 / A0 サイズ対応</li>
+            <li>1枚からご注文OK</li>
+            <li>最短翌日〜発送</li>
+            <li>データ持込・デザイン制作どちらも対応</li>
+            <li>A4貼り合わせからの移行相談歓迎</li>
+          </ul>
+          <a class="price-cta-btn" href="#contact">この内容で相談する →</a>
+        </div>
 
         <!-- 02 チラシ制作 -->
         <article class="price reveal d2">
@@ -2433,6 +3141,7 @@ html{scroll-padding-top:80px}
           </svg>
         </span>
       </a>
+      <p class="pricing-cta-note">まずは予算感だけ聞いてみるだけでも大歓迎。お見積もりは無料です。</p>
     </div>
   </div>
 </section>
@@ -2443,14 +3152,19 @@ html{scroll-padding-top:80px}
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Works</span></span>
-        <h2 class="h-display" style="margin-top:18px">これまでの<br/><em>制作実績</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">こんなお店のお手伝いが<span class="marker">できます</span>。<br><span class="works__subtitle-inline">（制作イメージ）</span></h2>
       </div>
-      <p class="lede">飲食店・温浴・サロン・ECショップなど、地域に根ざした事業者さまを中心にお手伝いしています。<br/>※ 写真は仮の見本です。</p>
+      <p class="lede">神戸北区の飲食店・サロン・個人事業主の方に、こういうものを作れますという見本です。<br/>実案件は2026年6月以降、お客様の許可をいただいたものから順次掲載していきます。</p>
+    </div>
+
+    <div class="works-notice reveal" style="font-size:1rem;background:#fff8e7;border:2px solid #e0b840;padding:20px 24px;border-radius:12px;margin-bottom:32px;">
+      <span class="works-notice-icon">📌</span>
+      <p>これらは私たちが作れるものの見本です。実際の納品物ではありません。実案件は2026年6月以降、お客様の許可をいただいたものから順次掲載していきます。</p>
     </div>
 
     <div class="works-grid">
 
-      <article class="work reveal">
+      <article class="work reveal-scale">
         <div class="work-img">
           <img src="public/images/case01.png" alt="CASE 01 風呂屋たぬき" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 01</span>
@@ -2461,7 +3175,7 @@ html{scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="work reveal d2">
+      <article class="work reveal-scale delay-1">
         <div class="work-img">
           <img src="public/images/case02.png" alt="CASE 02 喫茶こもれび" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 02</span>
@@ -2472,7 +3186,7 @@ html{scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="work reveal d3">
+      <article class="work reveal-scale delay-2">
         <div class="work-img">
           <img src="public/images/case03.png" alt="CASE 03 工房ぬくも堂" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 03</span>
@@ -2483,7 +3197,7 @@ html{scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="work reveal">
+      <article class="work reveal-scale">
         <div class="work-img">
           <img src="public/images/case04.png" alt="CASE 04 ベーカリー羽根" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 04</span>
@@ -2494,7 +3208,7 @@ html{scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="work reveal d2">
+      <article class="work reveal-scale delay-1">
         <div class="work-img">
           <img src="public/images/case05.png" alt="CASE 05 整骨院 結" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 05</span>
@@ -2505,7 +3219,7 @@ html{scroll-padding-top:80px}
         </div>
       </article>
 
-      <article class="work reveal d3">
+      <article class="work reveal-scale delay-2">
         <div class="work-img">
           <img src="public/images/case06.png" alt="CASE 06 旅館 月待" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           <span class="client">CASE 06</span>
@@ -2532,65 +3246,38 @@ html{scroll-padding-top:80px}
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>Flow</span></span>
-        <h2 class="h-display" style="margin-top:18px">制作の<em>流れ</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">制作の<em>流れ</em>。</h2>
       </div>
       <p class="lede">ご相談から納品まで、最短5日。<br/>各ステップで密にやりとりしながら、安心して進められます。</p>
     </div>
 
     <div class="flow-manga reveal">
-      <img src="images/seisakunonagare.jpg" alt="制作の流れ" style="width:100%;height:auto;display:block;box-shadow:var(--shadow-md);">
-    </div>
-  </div>
-</section>
-
-<!-- ───────── Testimonials ───────── -->
-<section class="section section-cream" id="voices" data-screen-label="09 Voices" style="background:#ffffff">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow"><span class="dot"></span><span>Voices</span></span>
-        <h2 class="h-display" style="margin-top:18px">お客様の<em>声</em>。</h2>
-      </div>
-      <p class="lede">小さなご相談から始まったお取引が、お店づくりの相棒に。<br/>ありがたいお声をいただいています。</p>
-    </div>
-
-    <div class="test-grid">
-      <article class="test reveal">
-
-        <p>夜遅い時間に相談したのに、翌朝にはラフをいただけて驚きました。「ちょっと聞きにくいな」も全部相談できる距離感が嬉しいです。</p>
-        <div class="who"><div class="ava">M</div><div class="who-info"><b>松井さま</b><span>銭湯 / 神戸市北区</span></div></div>
-      </article>
-      <article class="test reveal d2">
-
-        <p>AIで案を出してから人の手で仕上げる流れが自然で、料金も納得感がありました。商品の写真がほんとうに美味しそうに撮れていて感激。</p>
-        <div class="who"><div class="ava">S</div><div class="who-info"><b>佐伯さま</b><span>飲食店 / 神戸市</span></div></div>
-      </article>
-      <article class="test reveal d3">
-
-        <p>大手にお願いするほどではないけれど、自分でやるには少し不安。そんな"ちょうどいい距離"でお願いできるパートナーです。</p>
-        <div class="who"><div class="ava">K</div><div class="who-info"><b>木村さま</b><span>個人事業 / 大阪市</span></div></div>
-      </article>
+      <img src="public/images/flow_manga.jpg" alt="制作の流れ — 01 お問い合わせ・ヒアリング → 02 方向性のすり合わせ → 03 デザイン制作・撮影 → 04 ご確認・修正 → 05 納品・運用サポート"
+           style="height:auto;">
     </div>
   </div>
 </section>
 
 <!-- ───────── FAQ ───────── -->
-<section class="section section-paper" id="faq" data-screen-label="10 FAQ" style="background:#f0f5f0">
+<section class="section section-paper" id="faq" data-screen-label="10 FAQ" style="background:#F5F5F0">
   <div class="wrap">
     <div class="section-head reveal">
       <div>
         <span class="eyebrow"><span class="dot"></span><span>FAQ</span></span>
-        <h2 class="h-display" style="margin-top:18px">よくある<em>ご質問</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">よくある<em>ご質問</em>。</h2>
       </div>
       <p class="lede">気になることを、よく聞かれる順に並べました。<br/>ここに答えがなければ、お気軽にご連絡ください。</p>
     </div>
 
     <div class="faq">
-      <details class="reveal" open><summary><span class="q">Q</span><span>納期はどのくらいですか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">内容にもよりますが、SNS素材は最短翌日、チラシは5〜10営業日、LPは2週間〜が目安です。お急ぎの場合はご相談ください。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span><span>納期はどのくらいですか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">内容にもよりますが、SNS素材は最短翌日、チラシは5〜10営業日、LPは2週間〜が目安です。お急ぎの場合はご相談ください。</div></details>
       <details class="reveal"><summary><span class="q">Q</span><span>遠方なのですが対応してもらえますか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">神戸市北区を拠点に、全国対応しております。打ち合わせはオンラインで、撮影は出張も承ります。</div></details>
-      <details class="reveal"><summary><span class="q">Q</span><span>AIで作ったものを、そのまま納品してくれるのですか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">いいえ。AIはあくまで下案づくりまで。最終的なデザインは必ずデザイナーが手で仕上げ、商用利用に問題のない形でお渡しします。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span><span>写真やロゴがないのですが、大丈夫でしょうか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">はい、大丈夫です。撮影からご一緒できますし、ロゴがない段階でのご相談も歓迎しています。必要な素材は、ヒアリングの中で一緒に整理していきましょう。</div></details>
       <details class="reveal"><summary><span class="q">Q</span><span>修正は何回までできますか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">基本的に2回まで無料、それ以降は内容により別途お見積りいたします。事前にどの範囲まで含むかも明示してご相談に乗ります。</div></details>
       <details class="reveal"><summary><span class="q">Q</span><span>支払い方法は？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">原則、銀行振込（前金または納品後）にて承っております。継続案件の場合は月締めも可能です。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span><span>私のお店、すごく小さいんですが、依頼しても大丈夫ですか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">もちろんです。むしろ私たちは、小さなお店こそ得意としています。1点5,000円からのご相談も大歓迎です。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span><span>打ち合わせは、お店まで来てもらえますか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">神戸北区内であれば、ご希望の場合はお店にお伺いします。お店の雰囲気を実際に見せていただいた方が、良いものが作れるので。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span><span>頼んだ後、何度も自分から連絡しないといけませんか？</span><span class="arr"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans">いいえ、こちらから進捗をご連絡します。お店のお仕事で忙しい中、催促のような連絡をしていただく必要はありません。</div></details>
     </div>
   </div>
 </section>
@@ -2602,7 +3289,7 @@ html{scroll-padding-top:80px}
       <div class="print-text reveal">
         <span class="badge-pill">Small-lot Printing</span>
         <span class="eyebrow"><span class="dot"></span><span>For Local Shops</span></span>
-        <h2 class="h-display" style="margin-top:14px">少量から、<br/><em>大判ポスター</em>も<br/>承ります。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:14px">少量から、<br/><em>大判ポスター</em>も<br/>承ります。</h2>
         <p class="lede" style="margin-top:18px">
           飲食店や商業施設でよく見かける、<br/>
           A4・A3を貼り合わせて作った<b style="font-style:normal;color:var(--terra-deep);font-weight:700">手作りの大判ポスター</b>。<br/>
@@ -2626,7 +3313,9 @@ html{scroll-padding-top:80px}
       </div>
 
       <div class="print-art reveal d2">
-        <img src="images/sasikae02.jpg" alt="大判ポスター印刷イメージ" style="width:100%;height:auto;display:block;border-radius:var(--r-lg);box-shadow:var(--shadow-md);">
+        <img src="public/images/poster_4koma.jpg"
+             alt="大判ポスター印刷の流れ — 継ぎ目が目立つA4貼り合わせポスターを、きれいにB1サイズ1枚で印刷"
+             style="width:100%;height:auto;display:block;border-radius:12px;">
       </div>
     </div>
   </div>
@@ -2636,25 +3325,25 @@ html{scroll-padding-top:80px}
 <section class="section section-cream" id="about" data-screen-label="11 About">
   <div class="wrap">
     <div class="about">
-      <div class="about-art reveal">
-        <img src="public/images/about-couple.png"
-             alt="夫婦チーム - 神戸市北区のAI×おりなす.Lab"
-             width="1200" height="900"
-             loading="lazy"
-             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%"/>
-        <div class="stamp">
-          <span>HUSBAND &amp; WIFE — TWO‑PERSON STUDIO</span>
-          <span>北区 → 全国</span>
+      <div class="about__visual">
+        <div class="about-art reveal">
+          <img src="public/images/about-couple02.png"
+               alt="夫婦チーム - 神戸市北区のおりなす.Lab"
+               width="1200" height="900"
+               loading="lazy"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%"/>
         </div>
+        <p class="about__caption-en">HUSBAND &amp; WIFE — TWO&#x2011;PERSON STUDIO</p>
+        <p class="about__caption-area">神戸北区 → 全国</p>
       </div>
 
       <div class="about-text reveal d2">
         <span class="eyebrow"><span class="dot"></span><span>About</span></span>
-        <h2 class="h-display" style="margin-top:18px">私たちに<em>ついて</em>。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">私たちに<em>ついて</em>。</h2>
         <p class="body">
           おりなす.Lab は、神戸市北区を拠点に活動する夫婦二人の制作チームです。<br/><br/>
           地元の飲食店・サロン・個人事業主の方が「気軽に相談できる、顔の見えるパートナー」でありたい。そんな思いで、チラシ・SNS・LP・撮影・印刷まで一貫してお手伝いしています。<br/><br/>
-          「こんなこと頼んでいいのかな？」そんな小さなひと言でも、大歓迎です。
+          「こんなこと頼んでいいのかな？」そんな小さなひと言でも、大歓迎です。LINEで「チラシってどれくらいで作れますか？」の一言から始めてくださって構いません。お見積もりが先、ではなく、まず話を聞かせてください。
         </p>
         <a class="btn-ghost" href="#contact">私たちにご相談ください
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -2676,7 +3365,7 @@ html{scroll-padding-top:80px}
     <div class="contact-grid">
       <div class="contact-info reveal">
         <span class="eyebrow"><span class="dot"></span><span>Contact</span></span>
-        <h2 class="h-display" style="margin-top:18px">神戸北区から、<br/><em>あなたのお店</em>を応援します。</h2>
+        <h2 class="h-display reveal-right" style="margin-top:18px">神戸北区から、<br/><em>あなたのお店</em><span class="nowrap">を応援します。</span></h2>
         <p class="lede">小さなご相談から、お待ちしております。<br/>「こんなこと聞いてもいいのかな？」も大歓迎です。</p>
 
         <a class="contact-channel" href="mailto:info@example.com">
@@ -2689,6 +3378,7 @@ html{scroll-padding-top:80px}
           <div><div class="lbl">Phone</div><div class="val">XXX-XXXX-XXXX</div></div>
         </a>
 
+        <!-- TODO: LINE LINE公式アカウントURL確定後に href を変更 -->
         <div class="qr-card">
           <div class="qr-mini" aria-hidden="true"></div>
           <div><div class="lbl">LINE QR</div><div class="val">こちらからもお気軽にどうぞ</div></div>
@@ -2736,6 +3426,12 @@ html{scroll-padding-top:80px}
             送信する
             <span class="arr" aria-hidden="true">→</span>
           </button>
+          <div class="cta-trust-list">
+            <span class="cta-trust-item">✅ 相談・見積もり無料</span>
+            <span class="cta-trust-item">✅ LINEでもOK</span>
+            <span class="cta-trust-item">✅ 予算が少なくても大丈夫</span>
+            <span class="cta-trust-item">✅ しつこい営業なし</span>
+          </div>
 
           <div id="successMessage" class="success-message" style="display: none;">
             <p>✓ お問い合わせありがとうございます。</p>
@@ -2780,15 +3476,16 @@ html{scroll-padding-top:80px}
       </div>
     </div>
     <div class="foot-bot">
-      <span>© 2026 おりなす.Lab All rights reserved.</span>
+      <span>© <span id="copy-year"></span> おりなす.Lab All rights reserved.</span>
       <span>Rooted in Kita-ku, made with care.</span>
     </div>
   </div>
 </footer>
 
+<!-- TODO: LINE LINE公式アカウントURL確定後に href を変更 -->
 <a class="floating-cta" id="floatingCta" href="#contact">
   <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-  ご相談はこちら
+  💬 LINEで無料相談
 </a>
 
 <!-- React + Babel for Tweaks panel -->
@@ -2864,10 +3561,19 @@ updateSiteNav();
 siteNav.classList.toggle('scrolled', window.scrollY > 60);
 
 // reveal on scroll
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
-}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+(function(){
+  var targets = document.querySelectorAll('.reveal, .reveal-right, .reveal-scale');
+  if (!targets.length) return;
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  targets.forEach(function(el){ observer.observe(el); });
+})();
 </script>
 
 <script src="public/js/contact-form.js"></script>
@@ -3430,6 +4136,9 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   /* ── 初期化（Q1を表示） ── */
   restartWizard();
 })();
+
+// 著作権年を自動更新
+document.getElementById('copy-year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
