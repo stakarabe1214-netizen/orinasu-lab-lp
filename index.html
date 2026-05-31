@@ -1182,16 +1182,8 @@ html{scroll-padding-top:80px}
 }
 .qr-mini{
   width:64px;height:64px;border-radius:8px;flex-shrink:0;
-  background:
-    repeating-conic-gradient(var(--ink) 0% 25%, #fff 0% 50%) 0 0/14px 14px,
-    #fff;
-  position:relative;
+  object-fit:contain;
 }
-.qr-mini::before, .qr-mini::after{
-  content:"";position:absolute;width:18px;height:18px;border:3px solid var(--ink);background:#fff;
-}
-.qr-mini::before{top:4px;left:4px}
-.qr-mini::after{bottom:4px;right:4px}
 .qr-card .lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;color:var(--ink-faint);text-transform:uppercase}
 .qr-card .val{font-size:13.5px;font-weight:600;margin-top:4px}
 
@@ -3378,9 +3370,9 @@ body {
           <div><div class="lbl">Phone</div><div class="val">XXX-XXXX-XXXX</div></div>
         </a>
 
-        <!-- TODO: LINE LINE公式アカウントURL確定後に href を変更 -->
+        <!-- LINE 公式アカウント QRコード -->
         <div class="qr-card">
-          <div class="qr-mini" aria-hidden="true"></div>
+          <img src="images/line-qr.png" alt="おりなす.Lab LINE公式アカウント QRコード" class="qr-mini">
           <div><div class="lbl">LINE QR</div><div class="val">こちらからもお気軽にどうぞ</div></div>
         </div>
       </div>
