@@ -1,6 +1,5 @@
 // api/contact.js
 require('dotenv').config();
-const { connectDB, Contact } = require('../lib/db');
 const { sendConfirmationEmail, sendAdminNotification } = require('../lib/email');
 const { validateContactForm } = require('../lib/validation');
 
@@ -23,9 +22,6 @@ module.exports = async (req, res) => {
   }
 
   try {
-    // データベース接続
-    await connectDB();
-
     // フォームデータを取得
     const { name, email, phone, message } = req.body;
 
@@ -39,19 +35,14 @@ module.exports = async (req, res) => {
       return;
     }
 
-    // 新規 Contact ドキュメント作成
-    const contact = new Contact({
+    // メール送信用のデータ構造を作成
+    const contact = {
       name,
       email,
       phone: phone || '',
       message,
-      status: 'new',
       createdAt: new Date(),
-    });
-
-    // DB に保存
-    await contact.save();
-    console.log(`✓ Contact saved: ${contact._id}`);
+    };
 
     // メール送信（完了を待ってからレスポンスを返す）
     try {
@@ -61,14 +52,13 @@ module.exports = async (req, res) => {
       ]);
       console.log('✓ Emails sent successfully');
     } catch (emailError) {
-      console.error('Email sending failed:', emailError.message);
+      console.error('✗ Email sending error:', emailError.message);
     }
 
     // クライアントに成功レスポンスを返す
     res.status(200).json({
       success: true,
       message: 'お問い合わせを受け付けました。',
-      contactId: contact._id,
     });
   } catch (error) {
     console.error('✗ API error:', error.message);
